@@ -17,10 +17,6 @@ body {
 header {
     width: 100%;
     padding: .5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .top {
@@ -35,12 +31,14 @@ header {
 }
 #burger:hover {
     background-color: rgba(0, 0, 0, .8);
+    cursor: pointer;
 }
 
 ul {
     display: flex;
     flex-direction: column;
     margin: 0;
+    padding: 0;
 }
 
 li {
@@ -64,8 +62,26 @@ li a {
     color: inherit;
 }
 
+.social {
+    text-align: center;
+}
+
+#menu {
+    transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+    height: 0;
+    overflow: hidden;
+}
+
+#menu.open {
+    transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+    height: 250px;
+}
+
 @media only screen and (min-width: 800px) {
     header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         flex-direction: row;
     }
     .top {
