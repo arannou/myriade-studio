@@ -12,11 +12,15 @@ body {
     margin: 0;
     font-family: raleway-regular;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
     width: 100%;
     padding: .5rem;
+    box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .top {
@@ -77,6 +81,16 @@ li a {
     height: 250px;
 }
 
+main {
+    flex-grow: 1;
+}
+
+footer {
+    padding: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media only screen and (min-width: 800px) {
     header {
         display: flex;
@@ -86,9 +100,17 @@ li a {
     }
     .top {
         width: auto;
+        flex-grow: 1;
     }
     #burger {
         display: none;
+    }
+    #menu, #menu.open {
+        height: auto;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
     ul {
         flex-direction: row;
