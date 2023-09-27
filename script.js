@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', main, false);
 
 function main() {
-    const currentPage = displayMenu()
-    displayPage(currentPage)
+    const currentPageContent = displayMenu()
+    displayPage(currentPageContent)
     displayCredits()
 
     document.getElementById("burger").addEventListener('click', showMenu)
@@ -25,13 +25,13 @@ function showMenu() {
 
 function displayMenu() {
     const pathname = window.location.pathname
-    let currentPage;
+    let currentPageContent;
     let lu = document.getElementById("meunlu")
     content.forEach(menu => {
         let active
         if (pathname.includes(menu.page)) {
             active = true
-            currentPage = menu.page
+            currentPageContent = menu.contenu
         } else {
             active = false
         }
@@ -47,19 +47,32 @@ function displayMenu() {
         li.appendChild(a);
         lu.appendChild(li);
     })
-    return currentPage
+    return currentPageContent
 }
 
+function displayPage(page) {
+    let main = document.getElementById("main")
+    page.forEach(item => {
+        if (item.type == "texte") {
+            displayText(item, main)
+        }
+    })
+}
+function displayText(item, parent) {
+    let p = document.createElement("p");
+    p.innerText = item.texteFR;
+    parent.appendChild(p)
+}
 
-function displayImage(media) {
+function displayImage(media, parent) {
     let image = document.createElement("img");
     image.setAttribute("src", media.source);
     image.setAttribute("alt", media.titre);
     
-    return image
+    parent.appendChild(image)
 }
 
-function displayVideo(media) {
+function displayVideo(media, parent) {
     let child = document.createElement("iframe");
     child.src = media.source;
     child.setAttribute("frameborder", 0);
@@ -67,10 +80,10 @@ function displayVideo(media) {
     child.width = "560";
     child.height = "315";
 
-    return child
+    parent.appendChild(child)
 }
 
-function displayVideoLocal(media) {
+function displayVideoLocal(media, parent) {
     child = document.createElement("video");
     child.setAttribute("controls", true);
     child.style.width = "560";
@@ -81,5 +94,5 @@ function displayVideoLocal(media) {
     source.innerText = "Your browser does not support the video tag."
     child.append(source)
 
-    return child
+    parent.appendChild(child)
 }
