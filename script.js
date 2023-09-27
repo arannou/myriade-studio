@@ -1,13 +1,38 @@
+let lang = 'FR'
 document.addEventListener('DOMContentLoaded', main, false);
 
 function main() {
+    let locale = localStorage.getItem('language')
+    if (locale) {
+        lang = locale
+    } else {
+        lang = 'FR'
+        localStorage.setItem('language', lang)
+    }
+
     const currentPageContent = displayMenu()
     displayPage(currentPageContent)
     displayCredits()
 
     document.getElementById("burger").addEventListener('click', showMenu)
+    document.getElementById("langEN").addEventListener('click', () => changeLang('EN'), false)
+    document.getElementById("langFR").addEventListener('click', () => changeLang('FR'), false)
 
 }
+
+function changeLang(newLang) {
+    if (newLang != lang) {
+        lang = newLang
+
+        // clear
+        document.getElementById("meunlu").innerHTML = ''
+        document.getElementById("main").innerHTML = ''
+
+        const currentPageContent = displayMenu()
+        displayPage(currentPageContent)
+    }
+}
+
 
 function displayCredits() {
     const year = new Date().getFullYear();
@@ -42,7 +67,8 @@ function displayMenu() {
         }
         let a = document.createElement("a");
         a.setAttribute("href", "./"+menu.page);
-        a.innerText = menu.texteFR
+        if (lang == 'FR') a.innerText = menu.texteFR
+        if (lang == 'EN') a.innerText = menu.texteEN
 
         li.appendChild(a);
         lu.appendChild(li);
@@ -60,7 +86,8 @@ function displayPage(page) {
 }
 function displayText(item, parent) {
     let p = document.createElement("p");
-    p.innerText = item.texteFR;
+    if (lang == 'FR') p.innerText = item.texteFR
+    if (lang == 'EN') p.innerText = item.texteEN
     parent.appendChild(p)
 }
 

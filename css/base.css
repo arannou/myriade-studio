@@ -66,7 +66,7 @@ li a {
     color: inherit;
 }
 
-.social {
+.social, .lang {
     text-align: center;
 }
 
@@ -78,11 +78,19 @@ li a {
 
 #menu.open {
     transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
-    height: 250px;
+    height: 270px;
 }
 
 main {
     flex-grow: 1;
+}
+
+.lang span {
+    cursor: pointer;
+}
+
+.lang img {
+    margin: .5rem;
 }
 
 footer {

@@ -8,7 +8,7 @@ const content = [{
             {
                 "type":"texte",
                 "texteFR":"Bonjour",
-                "texteEN":"Bonjour",
+                "texteEN":"Hello",
                 "position": "left"
             }
         ]
