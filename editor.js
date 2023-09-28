@@ -18,6 +18,7 @@ function main() {
     document.getElementById("extract").addEventListener('click', () => extractContent())
     document.getElementById("reset").addEventListener('click', () => resetContent())
     document.getElementById("refreshMenu").addEventListener('click', () => refreshMenu())
+    document.getElementById("addMenu").addEventListener('click', () => addMenu())
 
 }
 
@@ -197,4 +198,19 @@ function updateMenuModelFromUI() {
         newEditedContent.push(correspondingMenu[0])
     })
     editedContent = newEditedContent
+}
+
+function addMenu() {
+    let newMenu =     {
+        "type":"menu",
+        "texteFR": document.getElementById("newMenuFR").value,
+        "texteEN": document.getElementById("newMenuEN").value,
+        "contenu": []
+    }
+
+    document.getElementById("newMenuFR").value = ''
+    document.getElementById("newMenuEN").value = ''
+
+    editedContent.push(newMenu)
+    refreshMenuEdition()
 }
