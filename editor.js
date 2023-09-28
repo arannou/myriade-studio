@@ -17,10 +17,7 @@ function main() {
     document.getElementById("burger").addEventListener('click', showMenu)
     document.getElementById("extract").addEventListener('click', () => extractContent())
     document.getElementById("reset").addEventListener('click', () => resetContent())
-    document.getElementById("refreshMenu").addEventListener('click', () => {
-        document.getElementById("meunlu").innerHTML = ''
-        displayMenu()
-    })
+    document.getElementById("refreshMenu").addEventListener('click', () => refreshMenu())
 
 }
 
@@ -39,7 +36,9 @@ function extractContent() {
 }
 
 function resetContent() {
-    let editedContent = [...content]
+    editedContent = [...content]
+    refreshMenu()
+    refreshMenuEdition()
 }
 
 function displayCredits() {
@@ -76,13 +75,40 @@ function displayMenu() {
     })
 }
 
+function refreshMenu() {
+    document.getElementById("meunlu").innerHTML = ''
+    displayMenu()
+}
+
 function displayMenuEdition() {
     let main = document.getElementById("menuEditor")
 
     editedContent.forEach(menu => {
-        createInputText(menu, main)
-    })
+        let div = createInputText(menu, main)
+        let del = document.createElement("button");
+        del.innerText = '❌'
+        del.classList.add('deleteMenu')
+        div.appendChild(del)
+        del.addEventListener('click', () => deleteAMenu(menu))
 
+        let move = document.createElement("button");
+        move.innerText = '↕'
+        move.classList.add('moveMenu')
+        div.insertBefore(move, div.firstChild)
+        move.addEventListener('click', () => moveMenu(menu))
+
+    })
+    enableDragList('menuEditor')
+}
+
+function refreshMenuEdition() {
+    document.getElementById("menuEditor").innerHTML = ''
+    displayMenuEdition()
+}
+
+function deleteAMenu(menu) {
+    editedContent = editedContent.filter(m => m != menu)
+    refreshMenuEdition()
 }
 
 function createInputText(item, parent) {
@@ -100,6 +126,7 @@ function createInputText(item, parent) {
         pFR.addEventListener('change', (e) => updateVal(e.target.value, item, true))
         pEN.addEventListener('change', (e) => updateVal(e.target.value, item, false))
 
+        return div
 }
 
 function updateVal(newVal, target, isFr) {
@@ -121,4 +148,53 @@ function displayText(item, parent) {
     if (lang == 'FR') p.innerText = item.texteFR
     if (lang == 'EN') p.innerText = item.texteEN
     parent.appendChild(p)
+}
+
+
+/* Made with love by @fitri
+ This is a component of my ReactJS project
+https://www.codehim.com/vanilla-javascript/javascript-drag-and-drop-reorder-list */
+
+
+function enableDragList(id) {
+    const list = document.getElementById(id)
+    Array.prototype.map.call(list.children, (item) => {enableDragItem(item)});
+}
+
+function enableDragItem(item) {
+    item.setAttribute('draggable', true)
+    item.ondrag = handleDrag;
+    item.ondragend = handleDrop;
+}
+
+function handleDrag(item) {
+    const selectedItem = item.target,
+        list = selectedItem.parentNode,
+        x = event.clientX,
+        y = event.clientY;
+  
+    selectedItem.classList.add('drag-sort-active');
+    let swapItem = document.elementFromPoint(x, y) === null ? selectedItem : document.elementFromPoint(x, y);
+  
+    if (list === swapItem.parentNode) {
+        swapItem = swapItem !== selectedItem.nextSibling ? swapItem : swapItem.nextSibling;
+        list.insertBefore(selectedItem, swapItem);
+    }
+}
+
+function handleDrop(item) {
+    item.target.classList.remove('drag-sort-active');
+    updateMenuModelFromUI()
+}
+
+/* end of @fitri */
+
+function updateMenuModelFromUI() {
+    const items = document.getElementById('menuEditor').children
+    let newEditedContent = []
+    Array.prototype.map.call(items, i => {
+        let correspondingMenu = editedContent.filter(m => m.texteFR == i.children[1].value && m.texteEN == i.children[2].value)
+        newEditedContent.push(correspondingMenu[0])
+    })
+    editedContent = newEditedContent
 }
