@@ -9,9 +9,7 @@ function main() {
     displayMenuEdition()
     displayCredits()
 
-    content.forEach(page => {
-        displayPage(page.contenu)
-    })
+    displayPage(content[0].contenu) // display first page by default
 
 
     document.getElementById("burger").addEventListener('click', showMenu)
@@ -82,28 +80,32 @@ function refreshMenu() {
 }
 
 function displayMenuEdition() {
-    let main = document.getElementById("menuEditor")
+    let main = document.getElementById("menuEditorContent")
 
     editedContent.forEach(menu => {
         let div = createInputText(menu, main)
         let del = document.createElement("button");
         del.innerText = '❌'
+        del.setAttribute('title', "Supprimer le menu")
         del.classList.add('deleteMenu')
+        del.classList.add('icon')
         div.appendChild(del)
         del.addEventListener('click', () => deleteAMenu(menu))
 
         let move = document.createElement("button");
         move.innerText = '↕'
+        move.setAttribute('title', "Réordonner le menu")
         move.classList.add('moveMenu')
+        move.classList.add('icon')
         div.insertBefore(move, div.firstChild)
         move.addEventListener('click', () => moveMenu(menu))
 
     })
-    enableDragList('menuEditor')
+    enableDragList('menuEditorContent')
 }
 
 function refreshMenuEdition() {
-    document.getElementById("menuEditor").innerHTML = ''
+    document.getElementById("menuEditorContent").innerHTML = ''
     displayMenuEdition()
 }
 
@@ -191,7 +193,7 @@ function handleDrop(item) {
 /* end of @fitri */
 
 function updateMenuModelFromUI() {
-    const items = document.getElementById('menuEditor').children
+    const items = document.getElementById('menuEditorContent').children
     let newEditedContent = []
     Array.prototype.map.call(items, i => {
         let correspondingMenu = editedContent.filter(m => m.texteFR == i.children[1].value && m.texteEN == i.children[2].value)

@@ -3,3 +3,67 @@ div.drag-sort-active {
     background-color: rgba(0, 0, 0, .8);
     cursor: grab
 }
+
+button {
+    border: none;
+    color: black;
+    background-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--beige)
+}
+
+button.icon {
+    border-radius: 20px;
+    border: none;
+    padding: 2px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1px;
+}
+
+/*  #menuEditor */
+
+#menuEditor .newMenu {
+    margin-left: 25px;
+    padding: 0 1px;
+}
+
+#menuEditor input {
+    color: white;
+    border: none;
+    outline: none;
+    margin: 0 2px;
+    border-bottom: white solid 3px;
+    background-color: transparent;
+}
+
+#menuEditor ::placeholder {
+    color: white;
+    opacity: 0.5; /* Firefox */
+}
+
+#menuEditor ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: white;
+    opacity: 0.5;
+}
+
+#menuEditor input:focus-within {
+    border-bottom-color: var(--beige);
+}
+
+#menuEditor {
+    color: white;
+    background-color: var(--header);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.lang span {
+    cursor: auto;
+}
+.lang img {
+    filter: grayscale(100%);
+}

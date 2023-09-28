@@ -39,18 +39,20 @@
         </nav>
 
     </header>
-    <div>
-        <h1>Menu</h1>
-        <button id="refreshMenu">Rafraîchir</button>
-        <div id="menuEditor">
+    <div id="menuEditor">
+        <h1>Menu <button id="refreshMenu" class="icon" title="Rafraîchir">↻</button></h1>
+        <div id="menuEditorContent">
         </div>
-        <div>
-            <input placeholder="texte français" id="newMenuFR" />
-            <input placeholder="texte anglais" id="newMenuEN" />
-            <button id="addMenu">➕</button>
+        <div class="newMenu">
+            <input type="text" placeholder="texte français..."
+            id="newMenuFR"/><input type="text" placeholder="texte anglais..."
+            id="newMenuEN"/><button id="addMenu"
+            class="icon" title="Ajouter un menu">➕</button>
         </div>
     </div>
-    <main id="main">
+    <main>
+        <h1>Contenu de la page</h1>
+        <div id="main"></div>
     </main>
 
     <footer>

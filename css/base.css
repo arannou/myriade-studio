@@ -1,14 +1,21 @@
+:root {
+	--beige: rgb(208, 178, 142);
+    --dark-hover: rgba(0, 0, 0, .8);
+    --header: rgba(0, 0, 0, 0.5)
+}
 @font-face {
     font-family: raleway-regular;
     src: url(../font/Raleway-Regular.ttf);
 }
 
 body {
-    background-color: rgb(208, 178, 142);
+    background-color: var(--beige);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-image: url(../images/background.jpg);
+    /* background-image: url(../images/background-pcd.png); */
+
     margin: 0;
     font-family: raleway-regular;
     overflow: hidden;
@@ -21,7 +28,7 @@ header {
     width: 100%;
     padding: .5rem;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--header);
 }
 .top {
     display: flex;
@@ -34,7 +41,7 @@ header {
     padding: .5rem;
 }
 #burger:hover {
-    background-color: rgba(0, 0, 0, .8);
+    background-color: var(--dark-hover);
     cursor: pointer;
 }
 
@@ -57,10 +64,10 @@ li:nth-child(1) {
     border-top: none
 }
 li.active, li:hover {
-    color: rgb(208, 178, 142)
+    color: var(--beige)
 }
 
-li a {
+li a, li span {
     padding: 1rem;
     text-decoration: none;
     color: inherit;
@@ -83,6 +90,7 @@ li a {
 
 main {
     flex-grow: 1;
+    margin: 1rem;
 }
 
 .lang span {
@@ -96,7 +104,7 @@ main {
 footer {
     padding: 1rem;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--header);
 }
 
 @media only screen and (min-width: 800px) {
