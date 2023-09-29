@@ -10,6 +10,12 @@ const content = [
                 "texteFR":"Bonjour",
                 "texteEN":"Hello",
                 "position": "left"
+            },
+            {
+                "type":"texte",
+                "texteFR":"Je suis Manon",
+                "texteEN":"I am Manon",
+                "position": "left"
             }
         ]
     },

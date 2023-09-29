@@ -88,8 +88,13 @@ li a, li span {
     height: 270px;
 }
 
-main {
+.content {
     flex-grow: 1;
+    overflow: hidden auto;
+
+}
+
+main {
     margin: 1rem;
 }
 
