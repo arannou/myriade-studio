@@ -73,6 +73,10 @@ function displayMenu() {
         li.appendChild(a);
         lu.appendChild(li);
     })
+    if (!currentPageContent) {
+        // If root
+        currentPageContent = content[0].contenu
+    }
     return currentPageContent
 }
 
