@@ -216,3 +216,12 @@ function addMenu() {
     editedContent.push(newMenu)
     refreshMenuEdition()
 }
+
+/*
+
+TODO: image picker
+TODO: select item(s) and pick position (left/right)
+TODO: select items and group/ungroup -> under same {section}
+TODO: add content.sections with flex direction row
+TODO: add localstorage saves and detect them
+*/

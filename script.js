@@ -85,6 +85,8 @@ function displayPage(page) {
     page.forEach(item => {
         if (item.type == "texte") {
             displayText(item, main)
+        } else if (item.type == "image") {
+            displayImage(item, main)
         }
     })
 }
@@ -98,7 +100,8 @@ function displayText(item, parent) {
 function displayImage(media, parent) {
     let image = document.createElement("img");
     image.setAttribute("src", media.source);
-    image.setAttribute("alt", media.titre);
+    if (lang == 'FR') image.setAttribute("alt", media.texteFR);
+    if (lang == 'EN') image.setAttribute("alt", media.texteEN);
     
     parent.appendChild(image)
 }

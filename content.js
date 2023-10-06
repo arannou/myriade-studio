@@ -16,6 +16,13 @@ const content = [
                 "texteFR":"Je suis Manon",
                 "texteEN":"I am Manon",
                 "position": "left"
+            },
+            {
+                "type":"image",
+                "source":"images/apropos-1.jpg",
+                "texteFR":"Je suis Manon",
+                "texteEN":"I am Manon",
+                "position": "left"
             }
         ]
     },
