@@ -15,29 +15,31 @@ const content = [
                 "type":"texte",
                 "texteFR":"Je suis Manon",
                 "texteEN":"I am Manon",
-                "position": "right"
-            },
-            {
-                "type":"image",
-                "source":"images/apropos-1.jpg",
-                "texteFR":"Je suis Manon",
-                "texteEN":"I am Manon",
-                "position": "center"
+                "position": "left"
             },
             {
                 "type":"section",
-                "position": "right",
                 "contenu": [
                     {
-                        "type":"texte",
-                        "texteFR":"Un Texte",
-                        "texteEN":"A text",
+                        "type":"image",
+                        "source":"images/apropos-1.jpg",
+                        "texteFR":"Je suis Manon",
+                        "texteEN":"I am Manon",
+                        "position": "center"
                     },
                     {
                         "type":"image",
                         "source":"images/apropos-2.jpg",
                         "texteFR":"Je suis Manon",
                         "texteEN":"I am Manon",
+                        "position": "center"
+                    },
+                    {
+                        "type":"image",
+                        "source":"images/apropos-3.jpg",
+                        "texteFR":"Je suis Manon",
+                        "texteEN":"I am Manon",
+                        "position": "center"
                     },
                 ]
             },

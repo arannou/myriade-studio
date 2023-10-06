@@ -106,6 +106,13 @@ main {
     margin: .5rem;
 }
 
+.section-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
 footer {
     padding: 1rem;
     color: white;
@@ -142,5 +149,10 @@ footer {
     }
     li:nth-child(1) {
         border-left: none
+    }
+
+    .section-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }

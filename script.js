@@ -87,6 +87,8 @@ function displayPage(page) {
             displayText(item, main)
         } else if (item.type == "image") {
             displayImage(item, main)
+        } else if (item.type == "section") {
+            displaySection(item, main)
         }
     })
 }
@@ -94,7 +96,7 @@ function displayText(item, parent) {
     let p = document.createElement("p");
     if (lang == 'FR') p.innerText = item.texteFR
     if (lang == 'EN') p.innerText = item.texteEN
-    p.style.textAlign = item.position
+    if (item.position) p.style.textAlign = item.position
     parent.appendChild(p)
 }
 
@@ -104,7 +106,7 @@ function displayImage(media, parent) {
     image.setAttribute("src", media.source);
     if (lang == 'FR') image.setAttribute("alt", media.texteFR);
     if (lang == 'EN') image.setAttribute("alt", media.texteEN);
-    imageDiv.style.textAlign = media.position
+    if (media.position) imageDiv.style.textAlign = media.position
     imageDiv.appendChild(image)
     parent.appendChild(imageDiv)
 }
@@ -132,4 +134,19 @@ function displayVideoLocal(media, parent) {
     child.append(source)
 
     parent.appendChild(child)
+}
+
+function displaySection(section, parent) {
+    let div = document.createElement("div");
+    div.classList.add('section-flex')
+    section.contenu.forEach(item => {
+        if (item.type == "texte") {
+            displayText(item, div)
+        } else if (item.type == "image") {
+            displayImage(item, div)
+        } else if (item.type == "section") {
+            displaySection(item, div) 
+        }
+    })
+    parent.appendChild(div)
 }
