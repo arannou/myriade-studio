@@ -94,16 +94,19 @@ function displayText(item, parent) {
     let p = document.createElement("p");
     if (lang == 'FR') p.innerText = item.texteFR
     if (lang == 'EN') p.innerText = item.texteEN
+    p.style.textAlign = item.position
     parent.appendChild(p)
 }
 
 function displayImage(media, parent) {
+    let imageDiv = document.createElement("div");
     let image = document.createElement("img");
     image.setAttribute("src", media.source);
     if (lang == 'FR') image.setAttribute("alt", media.texteFR);
     if (lang == 'EN') image.setAttribute("alt", media.texteEN);
-    
-    parent.appendChild(image)
+    imageDiv.style.textAlign = media.position
+    imageDiv.appendChild(image)
+    parent.appendChild(imageDiv)
 }
 
 function displayVideo(media, parent) {
