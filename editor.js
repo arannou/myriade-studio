@@ -9,6 +9,9 @@ function main() {
     displayMenuEdition()
     displayCredits()
 
+    loadSaveIfExists()
+    autoSave(60000) // save each minute to local storage
+
     displayPage(content[0].contenu) // display first page by default
 
 
@@ -142,6 +145,8 @@ function displayPage(page) {
     page.forEach(item => {
         if (item.type == "texte") {
             displayText(item, main)
+        } else if (item.type == "image") {
+            displayImage(item, main)
         }
     })
 }
@@ -151,6 +156,15 @@ function displayText(item, parent) {
     if (lang == 'FR') p.innerText = item.texteFR
     if (lang == 'EN') p.innerText = item.texteEN
     parent.appendChild(p)
+}
+
+function displayImage(media, parent) {
+    let image = document.createElement("img");
+    image.setAttribute("src", media.source);
+    if (lang == 'FR') image.setAttribute("alt", media.texteFR);
+    if (lang == 'EN') image.setAttribute("alt", media.texteEN);
+    
+    parent.appendChild(image)
 }
 
 
@@ -223,5 +237,25 @@ TODO: image picker
 TODO: select item(s) and pick position (left/right)
 TODO: select items and group/ungroup -> under same {section}
 TODO: add content.sections with flex direction row
-TODO: add localstorage saves and detect them
 */
+
+function autoSave(interval) {
+    setInterval(() => {
+        localStorage.setItem('myriadeContent', JSON.stringify(editedContent))
+        localStorage.setItem('myriadeTimeSaved', new Date())
+    }, interval)
+}
+
+function loadSaveIfExists() {
+    let save = localStorage.getItem('myriadeContent')
+    let d = new Date(localStorage.getItem('myriadeTimeSaved'))
+    if (save) {
+        let doLoad = window.confirm('Des modifications ont été sauvegardées le : '+d.toLocaleDateString() + ' à '+ d.toLocaleTimeString() 
+        + '. Les restaurer ? (sinon revenir à l\'état du site public)')
+        if (doLoad) {
+            editedContent = JSON.parse(save)
+            refreshMenu()
+            refreshMenuEdition()
+        }
+    }
+}
