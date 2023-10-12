@@ -76,10 +76,23 @@ button.icon {
 #editContent {
     display: flex;
 }
-#editPane {
+#preview {
     flex-grow: 1;
 }
-#mediaPicker {
+
+#craftPad {
     width: 30%;
+    background-color: white;
+    padding: .5rem;
+    text-align: center;
+}
+
+#mediaPicker {
+    width: 0%;
     background-color: red;
+}
+
+#mediaPicker.opened {
+    width: 30%;
+    transition: width 1s linear;
 }

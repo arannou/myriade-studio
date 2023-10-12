@@ -50,9 +50,51 @@
             </div>
         </details>
         <div id="editContent">
-            <div id="editPane">
-                <h1>Contenu de la page</h1>
+            <div id="preview">
+                <h1>Contenu de la page</h1> 
                 <main id="main"></main>
+            </div>
+            <div id="craftPad">
+                <i id="editInfo">Clique sur un élément à modifier</i>
+                <div id="itemSelected" style="display:none">
+                    <h2>Modifier l'élément</h2>
+                    <div id="textEditor">
+                        <!-- createInputText -->
+                        <p>Aligner</p>
+                        <div>
+                            <input type="radio" name="align" value="left" id="radioLeft"/>
+                            <label for="radioLeft">À gauche</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="align" value="center" id="radioCenter"/>
+                            <label for="radioCenter">Au centre</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="align" value="right" id="radioRight"/>
+                            <label for="radioRight">À droite</label>
+                        </div>
+                    </div>
+                    <h2>Ajouter un élément</h2>
+                    <div>
+                        <label>Position</label>
+                        <select id="placementSelector">
+                            <option value="above">Au dessus</option>
+                            <option value="below">En dessous</option>
+                            <option value="left">À gauche</option>
+                            <option value="right">À droite</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Type d'élement</label>
+                        <select id="typeSelector">
+                            <option value="titre">Titre</option>
+                            <option value="texte">Texte</option>
+                            <option value="image">Image</option>
+                            <option value="video">Vidéo</option>
+                        </select>
+                    </div>
+                    <button id="addElement">Valider</button>
+                </div>
             </div>
             <div id="mediaPicker">
                 
