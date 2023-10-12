@@ -7,14 +7,8 @@ const content = [
     "contenu": [
             {
                 "type":"texte",
-                "texteFR":"Bonjour",
-                "texteEN":"Hello",
-                "position": "left"
-            },
-            {
-                "type":"texte",
-                "texteFR":"Je suis Manon",
-                "texteEN":"I am Manon",
+                "texteFR":"Site en construction...",
+                "texteEN":"Website under contruction...",
                 "position": "left"
             },
             {

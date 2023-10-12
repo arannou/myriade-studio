@@ -239,9 +239,8 @@ function addMenu() {
 /*
 
 TODO: image picker
-TODO: select item(s) and pick position (left/right)
-TODO: select items and group/ungroup -> under same {section}
-TODO: add content.sections with flex direction row
+TODO: select item(s) and send to craftpad
+TODO: choose to hide an item for a time
 */
 
 function autoSave(interval) {
