@@ -10,8 +10,8 @@ function main() {
         localStorage.setItem('language', lang)
     }
 
-    const currentPageContent = displayMenu()
-    displayPage(currentPageContent)
+    const currentPage = displayMenu()
+    displayPage(currentPage)
     displayCredits()
 
     document.getElementById("burger").addEventListener('click', showMenu)
@@ -28,8 +28,8 @@ function changeLang(newLang) {
         document.getElementById("meunlu").innerHTML = ''
         document.getElementById("main").innerHTML = ''
 
-        const currentPageContent = displayMenu()
-        displayPage(currentPageContent)
+        const currentPage = displayMenu()
+        displayPage(currentPage)
     }
 }
 
@@ -50,13 +50,13 @@ function showMenu() {
 
 function displayMenu() {
     const pathname = window.location.pathname
-    let currentPageContent;
+    let currentPage;
     let lu = document.getElementById("meunlu")
     content.forEach(menu => {
         let active
         if (pathname.includes(menu.page)) {
             active = true
-            currentPageContent = menu.contenu
+            currentPage = menu
         } else {
             active = false
         }
@@ -73,25 +73,33 @@ function displayMenu() {
         li.appendChild(a);
         lu.appendChild(li);
     })
-    if (!currentPageContent) {
+    if (!currentPage) {
         // If root
-        currentPageContent = content[0].contenu
+        currentPage = content[0]
     }
-    return currentPageContent
+    return currentPage
 }
 
 function displayPage(page) {
     let main = document.getElementById("main")
-    page.forEach(item => {
+    displayFromContentParsing(page, main, main)
+}
+
+function displayFromContentParsing(content, parent) {
+    content.contenu.forEach(item => {
         if (item.type == "texte") {
-            displayText(item, main)
+            displayText(item, parent)
         } else if (item.type == "image") {
-            displayImage(item, main)
+            displayImage(item, parent)
         } else if (item.type == "section") {
-            displaySection(item, main)
+            let div = document.createElement("div");
+            div.classList.add('section-flex')
+            displayFromContentParsing(item, div) 
+            parent.appendChild(div)
         }
     })
 }
+
 function displayText(item, parent) {
     let p = document.createElement("p");
     if (lang == 'FR') p.innerText = item.texteFR
@@ -134,19 +142,4 @@ function displayVideoLocal(media, parent) {
     child.append(source)
 
     parent.appendChild(child)
-}
-
-function displaySection(section, parent) {
-    let div = document.createElement("div");
-    div.classList.add('section-flex')
-    section.contenu.forEach(item => {
-        if (item.type == "texte") {
-            displayText(item, div)
-        } else if (item.type == "image") {
-            displayImage(item, div)
-        } else if (item.type == "section") {
-            displaySection(item, div) 
-        }
-    })
-    parent.appendChild(div)
 }

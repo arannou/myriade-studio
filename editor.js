@@ -7,12 +7,11 @@ function main() {
 
     displayMenu()
     displayMenuEdition()
-    displayCredits()
 
-    loadSaveIfExists()
+    //loadSaveIfExists() relou
     autoSave(60000) // save each minute to local storage
 
-    displayPage(content[0].contenu) // display first page by default
+    displayPage(content[0]) // display first page by default
 
 
     document.getElementById("burger").addEventListener('click', showMenu)
@@ -43,11 +42,6 @@ function resetContent() {
     refreshMenuEdition()
 }
 
-function displayCredits() {
-    const year = new Date().getFullYear();
-    document.getElementById("year").innerText = year;
-}
-
 function showMenu() {
     const list = document.getElementById('menu').classList
     if (list.contains("open")) {
@@ -72,7 +66,7 @@ function displayMenu() {
         lu.appendChild(li);
         li.addEventListener('click', () =>  {
             document.getElementById("main").innerHTML = ''
-            displayPage(menu.contenu)
+            displayPage(menu)
         })
     })
 }
@@ -142,11 +136,20 @@ function updateVal(newVal, target, isFr) {
 
 function displayPage(page) {
     let main = document.getElementById("main")
-    page.forEach(item => {
+    displayFromContentParsing(page, main, main)
+}
+
+function displayFromContentParsing(content, parent) {
+    content.contenu.forEach(item => {
         if (item.type == "texte") {
-            displayText(item, main)
+            displayText(item, parent)
         } else if (item.type == "image") {
-            displayImage(item, main)
+            displayImage(item, parent)
+        } else if (item.type == "section") {
+            let div = document.createElement("div");
+            div.classList.add('section-flex')
+            displayFromContentParsing(item, div) 
+            parent.appendChild(div)
         }
     })
 }
@@ -166,6 +169,8 @@ function displayImage(media, parent) {
     
     parent.appendChild(image)
 }
+
+
 
 
 /* Made with love by @fitri
