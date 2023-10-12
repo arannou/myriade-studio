@@ -35,24 +35,32 @@
         </nav>
 
     </header>
-    <div id="menuEditor">
-        <h1>Menu <button id="refreshMenu" class="icon" title="Rafraîchir">↻</button></h1>
-        <div id="menuEditorContent">
-        </div>
-        <div class="newMenu">
-            <input type="text" placeholder="texte français..."
-            id="newMenuFR"/><input type="text" placeholder="texte anglais..."
-            id="newMenuEN"/><button id="addMenu"
-            class="icon" title="Ajouter un menu">➕</button>
+    <div class="content">
+        <details id="menuEditor">
+            <summary>
+                <h1 class="collapsible">Menu <button id="refreshMenu" class="icon" title="Rafraîchir">↻</button></h1>
+            </summary>
+            <div id="menuEditorContent">
+            </div>
+            <div class="newMenu">
+                <input type="text" placeholder="texte français..."
+                id="newMenuFR"/><input type="text" placeholder="texte anglais..."
+                id="newMenuEN"/><button id="addMenu"
+                class="icon" title="Ajouter un menu">➕</button>
+            </div>
+        </details>
+        <div id="editContent">
+            <div id="editPane">
+                <h1>Contenu de la page</h1>
+                <main id="main"></main>
+            </div>
+            <div id="mediaPicker">
+                
+            </div>
         </div>
     </div>
-    <main>
-        <h1>Contenu de la page</h1>
-        <div id="main"></div>
-    </main>
 
     <footer>
-        <span>Copyright © Manon Auguste, 2017-</span><span id="year"></span>
         <button id="extract">Extraire</button>
         <button id="reset">Réinitialiser</button>
     </footer>

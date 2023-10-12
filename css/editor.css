@@ -25,6 +25,9 @@ button.icon {
 }
 
 /*  #menuEditor */
+.collapsible {
+    display: inline;
+}
 
 #menuEditor .newMenu {
     margin-left: 25px;
@@ -66,4 +69,17 @@ button.icon {
 }
 .lang img {
     filter: grayscale(100%);
+}
+
+
+/* media picker */
+#editContent {
+    display: flex;
+}
+#editPane {
+    flex-grow: 1;
+}
+#mediaPicker {
+    width: 30%;
+    background-color: red;
 }
