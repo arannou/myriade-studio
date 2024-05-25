@@ -24,7 +24,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     /* background-position-x: right; */
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background-phone.jpg);
     /* background-image: url(../images/background-pcd.png); */
 
     margin: 0;
@@ -119,6 +119,9 @@ a.subscribe:visited {
 
 
 @media only screen and (min-width: 800px) {
+    body {
+        background-image: url(../images/background.jpg);
+    }
     h1 {
         font-size: 5rem;
     }
