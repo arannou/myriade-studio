@@ -1,5 +1,6 @@
 :root {
 	--beige: rgb(208, 178, 142);
+    --brown: #69443C;
     --dark-hover: rgba(0, 0, 0, .8);
     --header: rgba(0, 0, 0, 0.5)
 }
@@ -7,6 +8,11 @@
     font-family: raleway-regular;
     src: url(../font/Raleway-Regular.ttf);
 }
+@font-face {
+    font-family: the-seasons-regular;
+    src: url(../font/Fontspring-DEMO-theseasons-reg.otf);
+}
+/* font-family: 'Quicksand'; */
 
 body {
     background-color: var(--beige);
@@ -116,43 +122,4 @@ main {
 footer {
     padding: 1rem;
     color: white;
-    background-color: var(--header);
-}
-
-@media only screen and (min-width: 800px) {
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: row;
-    }
-    .top {
-        width: auto;
-        flex-grow: 1;
-    }
-    #burger {
-        display: none;
-    }
-    #menu, #menu.open {
-        height: auto;
-        flex-grow: 1;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    ul {
-        flex-direction: row;
-    }
-    li {
-        border-left: 1px solid white;
-        border-top: none
-    }
-    li:nth-child(1) {
-        border-left: none
-    }
-
-    .section-flex {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
 }
