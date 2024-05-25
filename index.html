@@ -4,51 +4,61 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Myriade Studio</title>
-    <meta name="description" content="TODO a définir: apparrait dans le moteur de recherch" />
-    <meta name="keywords" content="TODO pour le SEO" />
+    <meta name="description"
+        content="Conception et réalisation de design textile pour des intérieurs d'exception. Je réalise sur-mesure des pièces textiles conçues en adéquation avec vos lieux. Réalisés artisanalement pour répondre à vos commandes, ces textiles tissés ou brodés sont également proposés en version lumineuse pour créer des effets de lumière uniques." />
+    <meta name="keywords"
+        content="myriadestudio manon auguste design d'intérieur interior luminaire ameublement déco textile tissage art fait main handmade craft france" />
     <meta name="Resource-type" content="Document" />
     <meta name="robots" content="noimageindex" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <link rel="stylesheet" type="text/css" href="css/laptop.css" />
+    <link rel="stylesheet" type="text/css" href="css/wip.css" />
 
 </head>
 
 <body>
     <header>
-        <div class="top">
-            <img alt="logo" src="images/logo myriade blanc.png">
-            <div id="burger">
-                <img width="28" alt="Ouvrir le menu" src="images/burger-icon.svg" />
+        <div class="icon">
+            <p>myriade</p>
+            <span id="logo-divider"></span>
+            <p>studio</p>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="centered">
+            <h1>Work in progress</h1>
+            <p>Le site est en cours d’améliorations<br />
+                vous pourrez bientôt le redécouvrir</p>
+        </div>
+        <div>
+            <a href="https://hotmail.us21.list-manage.com/subscribe?u=5cb797964b843b0cc2afd2049&id=6e134282d5"
+                class="subscribe">Me
+                prévenir</a>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/manon-auguste-617461121/"><img alt="Lien vers mon compte LinkedIn"
+                        src="images/icons/linkedin.svg" /></a>
+                <a href="https://www.instagram.com/myriadestudio"><img alt="Lien vers mon compte Instagram"
+                        src="images/icons/instagram.svg" /></a>
+                <a id="mail"><img alt="Envoyez-moi un e-amil" src="images/icons/icons8-envelope-50.png" /></a>
+            </div>
+            <div class="address">
+                <p>Myriade Studio</p>
+                <p>28 rue Papavoine</p>
+                <p>27100 Le Vaudreuil</p>
+                <p>À 1h10 de Paris</p>
             </div>
         </div>
-        <nav id="menu">
-            <ul id="meunlu">
-            </ul>
-            <!--div class="social">
-                <a href="instagram"><img alt="Lien instagram" src="images/instagram.png" /></a>
-                <a href="linkedin"><img alt="Lien linkedin" src="images/linkedin.png" /></a>
-                <a href="pinterest"><img alt="Lien pinterest" src="images/pinterest.png" /></a>
-            </div -->
-            <div class="lang">
-                <span id="langEN"><img src="images/us.png" alt="Read in english"></span>
-                <span id="langFR"><img src="images/fr.png" alt="Lire en français"></span>
-            </div>
-        </nav>
+    </main>
 
-    </header>
-    <div class="content">
-        <video autoplay muted loop style="width:100vw">
-            <source src="images/video-accueil.mp4" type="video/mp4" />
-        </video>
-        <main id="main">
-        </main>
-    </div>
-    <footer>
-        <span>Copyright © Manon Auguste, 2017-</span><span id="year"></span>
-    </footer>
-    <script src="content.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="content.js"></script>
+    -->
+    <script>
+        document.getElementById("mail").addEventListener("click", () => {
+            builtEmail = "manon" + "@" + "myriadestudio" + ".com"
+            navigator.clipboard.writeText(builtEmail)
+            window.alert("Adresse e-mail copiée!")
+        })
+    </script>
 </body>
