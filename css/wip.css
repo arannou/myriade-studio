@@ -1,5 +1,5 @@
 :root {
-	--beige: rgb(208, 178, 142);
+	--beige: #d0b28e;
     --brown: #69443C;
     --dark-hover: rgba(0, 0, 0, .8);
     --header: rgba(0, 0, 0, 0.5)
@@ -39,6 +39,9 @@ body {
 header {
     margin-left: 20%;
     margin-top: .5rem;
+}
+.icon {
+    overflow-x: hidden;
 }
 #logo-divider {
     border: white solid 1px;
@@ -85,6 +88,7 @@ h1 {
 }
 
 a.subscribe {
+    color: var(--brown);
     text-transform: uppercase;
     background-color: white;
     padding: .7rem 2rem;
@@ -106,8 +110,11 @@ a.subscribe:visited {
 .social img {
     height: 2.5rem;
 }
-.address p{
+.address p {
     margin: 0;
+}
+.address {
+    margin-bottom: .5rem;
 }
 
 
