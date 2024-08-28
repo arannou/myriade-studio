@@ -22,8 +22,7 @@ body {
     background-color: var(--beige);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-attachment: fixed; */
-    /* background-position-x: right; */
+    background-size: 100vw 100vh;
     background-image: url(../images/background-phone.jpg);
     /* background-image: url(../images/background-pcd.png); */
 
