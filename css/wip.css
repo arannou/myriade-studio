@@ -1,0 +1,131 @@
+:root {
+	--beige: #d0b28e;
+    --brown: #69443C;
+    --dark-hover: rgba(0, 0, 0, .8);
+    --header: rgba(0, 0, 0, 0.5)
+}
+@font-face {
+    font-family: raleway-regular;
+    letter-spacing: .25rem;
+    src: url(../font/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: the-seasons-regular;
+    src: url(../font/Fontspring-DEMO-theseasons-reg.otf);
+}
+@font-face {
+    font-family: avant-garde;
+    src: url(../font/ITCAvantGardeStd-XLt.otf);
+}
+
+body {
+    background-color: var(--beige);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-position-x: right; */
+    background-image: url(../images/background-phone.jpg);
+    /* background-image: url(../images/background-pcd.png); */
+
+    margin: 0;
+    font-family: raleway-regular;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* HEADER */
+header {
+    margin-left: 20%;
+    margin-top: .5rem;
+}
+.icon {
+    overflow-x: hidden;
+}
+#logo-divider {
+    border: white solid 1px;
+    display: block;
+    width: 100px;
+    animation: expand-logo-divider 4s ease 1s 1 normal forwards;
+}
+@keyframes expand-logo-divider {
+    0% {
+		width: 100px;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+.icon p {
+    font-family: avant-garde;
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+}
+
+/* MAIN */
+main {
+    margin-top: 10%;
+    text-align: center;
+    height: 100%;
+    color: var(--brown);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 1rem;
+    font-family: the-seasons-regular;
+}
+.centered p {
+    font-size: 1.2rem;
+}
+
+a.subscribe {
+    color: var(--brown);
+    text-transform: uppercase;
+    background-color: white;
+    padding: .7rem 2rem;
+    border-radius: 1.5rem;
+    margin: 1rem;
+}
+a.subscribe:visited {
+    color: var(--brown);
+}
+
+.social {
+    margin: 3rem;
+}
+.social a {
+    height: 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.social img {
+    height: 2.5rem;
+}
+.address p {
+    margin: 0;
+}
+.address {
+    margin-bottom: .5rem;
+}
+
+
+@media only screen and (min-width: 800px) {
+    body {
+        background-image: url(../images/background.jpg);
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    .centered p {
+        font-size: 1.5rem;
+    }
+}
