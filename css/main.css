@@ -1,14 +1,6 @@
 /* MAIN */
 main {
-    margin-top: 10%;
-    text-align: center;
-    height: 100%;
     color: var(--brown);
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-around;
 }
 h1 {
     font-size: 3rem;
@@ -16,33 +8,8 @@ h1 {
     margin: 1rem;
     font-family: the-seasons-regular;
 }
-.centered p {
-    font-size: 1.2rem;
-}
 
-a.subscribe {
-    color: var(--brown);
-    text-transform: uppercase;
-    background-color: white;
-    padding: .7rem 2rem;
-    border-radius: 1.5rem;
-    margin: 1rem;
-}
-a.subscribe:visited {
-    color: var(--brown);
-}
 
-.social {
-    margin: 3rem;
-}
-.social a {
-    height: 2rem;
-    margin: 0 1rem;
-    cursor: pointer;
-}
-.social img {
-    height: 2.5rem;
-}
 .address p {
     margin: 0;
 }
@@ -61,4 +28,65 @@ a.subscribe:visited {
     .centered p {
         font-size: 1.5rem;
     }
+}
+
+img {
+    max-width: 300px;
+}
+.section-container {
+    display: flex;
+    height: 100%;
+}
+.page {
+    margin: 2vh;
+    height: 96vh;
+}
+
+
+
+/* PAGE d'accueil */
+
+#page-accueil {
+    text-align: left;
+}
+#page-accueil .section-container{
+    align-items: flex-end;
+}
+
+#page-accueil p {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.travaillons {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.travaillons .social {
+    margin: 0 3rem;
+}
+.travaillons .social a {
+    height: 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.travaillons .social img {
+    height: 2.5rem;
+}
+
+#page-accueil button {
+    color: var(--brown);
+    text-transform: uppercase;
+    background-color: white;
+    padding: .7rem 2rem;
+    border-radius: 1.5rem;
+
+}
+#page-accueil button:visited {
+    color: var(--brown);
+}
+
+#big-image {
+    margin: 0 6rem
 }
