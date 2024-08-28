@@ -42,6 +42,10 @@ img {
     height: 96vh;
 }
 
+p {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
 
 
 /* PAGE d'accueil */
@@ -53,10 +57,6 @@ img {
     align-items: flex-end;
 }
 
-#page-accueil p {
-    font-size: 1.5rem;
-    margin: 1rem;
-}
 .travaillons {
     display: flex;
     align-items: center;
@@ -129,4 +129,32 @@ img {
 }
 #image-5 {
     margin-right: 20%;
+}
+
+
+/* page-services */
+
+#page-services {
+    padding: 4rem;
+    background-color: var(--beige);
+    background-size: cover;
+    background-size: 100vw 100vh;
+}
+
+h2 {
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+#page-services section {
+    text-align: center;
+}
+
+#page-services hr {
+    width: 80%;
+    border-color: var(--brown);
+}
+
+.losange {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
