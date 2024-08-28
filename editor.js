@@ -136,22 +136,53 @@ function updateVal(newVal, target, isFr) {
 
 function displayPage(page) {
     let main = document.getElementById("main")
-    displayFromContentParsing(page, main, main)
+    let parentName = "main"
+    displayFromContentParsing(page, main, parentName)
 }
 
-function displayFromContentParsing(content, parent) {
+function displayFromContentParsing(content, parent, parentName) {
+    let child;
+    let childCount = 0
     content.contenu.forEach(item => {
+        let childClass = parentName + '-' + childCount
         if (item.type == "texte") {
-            displayText(item, parent)
+            child = displayText(item, parent)
         } else if (item.type == "image") {
-            displayImage(item, parent)
+            child = displayImage(item, parent)
         } else if (item.type == "section") {
             let div = document.createElement("div");
             div.classList.add('section-flex')
-            displayFromContentParsing(item, div) 
+            displayFromContentParsing(item, div, childClass + "-section") 
             parent.appendChild(div)
+            child = div
         }
+
+        child.classList.add(childClass)
+        child.classList.add('selectable')
+        child.addEventListener('click', (e) => sendToCraftpad(e))
+        childCount++
     })
+}
+
+function sendToCraftpad(e) {
+    e.stopPropagation()
+    console.log(e.target.tagName) // image, p, div ...
+    console.log(e.target.classList) // image, p, div ...
+
+    // get corresponding content_element
+    if (e.target.tagName == "IMG") {
+        // with filter of parse class ??
+        let correspondingimage = editedContent.filter(m => m.texteFR == i.children[1].value && m.texteEN == i.children[2].value)
+        
+    }
+    // fill form
+    document.querySelector("#textEditor input[value="+content+"]")
+
+
+    // make form visible
+    document.getElementById("itemSelected").style.display = "block"
+
+    
 }
 
 function displayText(item, parent) {
@@ -159,6 +190,7 @@ function displayText(item, parent) {
     if (lang == 'FR') p.innerText = item.texteFR
     if (lang == 'EN') p.innerText = item.texteEN
     parent.appendChild(p)
+    return p
 }
 
 function displayImage(media, parent) {
@@ -168,6 +200,7 @@ function displayImage(media, parent) {
     if (lang == 'EN') image.setAttribute("alt", media.texteEN);
     
     parent.appendChild(image)
+    return image
 }
 
 
@@ -200,6 +233,11 @@ function addMenu() {
 
 TODO: image picker
 TODO: select item(s) and send to craftpad
+    - get content element from click
+    - update_item()
+    - add_item()
+    - remove_item()
+    
 TODO: choose to hide an item for a time
 */
 
