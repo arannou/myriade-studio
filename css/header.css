@@ -1,11 +1,12 @@
 
 /* HEADER */
 header {
-    margin-left: 20%;
+    margin-left: 20vw;
     margin-top: .5rem;
     display: flex;
     position: fixed;
-    width: 80%;
+    width: 78vw;
+    padding-right: 2vh;
 }
 .icon {
     overflow-x: hidden;
@@ -33,17 +34,39 @@ nav > a:focus, nav > a:hover {
     transition: color 200ms linear;
 }
 
-header button {
-    background-color: transparent;
+#burger {
+    padding: 1.2rem;
+}
+
+header #end-of-line button {
+    display: none;
+}
+@media only screen and (min-width: 800px) {
+    header #end-of-line button {
+        padding: 1.2rem 3rem;
+        display: initial;
+    }
+    #burger {
+        display: none;
+    }
+}
+
+header #end-of-line {
     border: 1px white solid;
     font-family: raleway-regular;
-    padding: 0 3rem;
+    color: white;
     margin: 1.2rem;
     margin-left: 0;
+    background-color: transparent;
     transition: background-color 800ms linear;
 }
-header button:hover {
-    background-color: white;
+
+header #end-of-line button {
+    background-color: transparent;
+}
+
+header #end-of-line:hover {
+    background-color: rgba(255, 255, 255, 0.6);
     transition: background-color 800ms linear;
 }
 #logo-divider {
