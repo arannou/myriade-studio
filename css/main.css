@@ -8,7 +8,11 @@ h1 {
     margin: 1rem;
     font-family: the-seasons-regular;
 }
-
+@media only screen and (min-width: 800px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
 
 .address p {
     margin: 0;
@@ -30,6 +34,9 @@ h1 {
     }
 }
 
+img {
+    max-width: 300px;
+}
 .section-container {
     display: flex;
     height: 100%;

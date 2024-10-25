@@ -22,8 +22,7 @@ body {
     background-color: var(--beige);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 100vw 100vh;
-    background-image: url(../images/background-phone.jpg);
+    /* background-image: url(../images/background-phone.jpg); */
     /* background-image: url(../images/background-pcd.png); */
 
     margin: 0;
@@ -32,6 +31,12 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+}
+@media only screen and (min-width: 800px) {
+    body {
+        /* background-image: url(../images/background.jpg); */
+        /* background-image: url(../images/background-pcd.png); */
+    }
 }
 
 button:hover {
