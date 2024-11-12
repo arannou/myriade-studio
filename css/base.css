@@ -1,6 +1,7 @@
 :root {
 	--beige: #d0b28e;
     --brown: #69443C;
+    --brown-bkgd: rgb(138, 85, 56);
     --dark-hover: rgba(0, 0, 0, .8);
     --header: rgba(0, 0, 0, 0.5)
 }

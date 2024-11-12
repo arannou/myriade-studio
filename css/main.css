@@ -130,40 +130,42 @@ p {
 
 
 
-/* page-gallerie */
+/* page-mood-board */
 
-#page-gallerie {
-    background-color: var(--brown);
+#page-mood-board {
+    background-color: var(--brown-bkgd);
     background-size: cover;
     background-size: 100vw 100vh;
 }
 
-#page-gallerie .section-container{
+#page-mood-board .section-container{
     align-items: flex-end;
     justify-content: space-between;
 }
-#gallerie-left {
+#mood-board-left {
     align-items: flex-end;
 }
 
-#gallerie-middle, #gallerie-right {
+#mood-board-middle, #mood-board-right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
 
-#page-gallerie  img {
+#page-mood-board  img {
     max-width: 300px;
 
 }
 #image-3 {
     margin: 20%;
     margin-right: 0;
+}
+
+img.round-top {
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
 }
-
 #image-4 {
     margin-top: 10%;
     margin-left: 10%;
@@ -172,6 +174,38 @@ p {
     margin-right: 20%;
 }
 
+
+/* page-about */
+#page-about {
+    background-color: white;
+    padding: 4em;
+}
+#page-about .section-container {
+    justify-content: space-between;
+}
+
+#page-about section {
+    flex-basis: 60%;
+}
+#page-about section:first-child {
+    flex-basis: 30%;
+}
+#page-about section:first-child div {
+    text-align: center;
+}
+#page-about section:first-child p {
+    margin-left: 0;
+    margin-right: 0;
+}
+h3 {
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    font-size: 2em;
+    font-weight: normal;
+    margin-bottom: 2em;
+    font-family: the-seasons-regular;
+}
 
 /* page-services */
 
@@ -182,6 +216,25 @@ p {
     background-size: 100vw 100vh;
 }
 
+#services-head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#services-head h2 {
+    flex-grow: 2;
+}
+#services-head p {
+    flex-basis: 40%;
+}
+#services-head a {
+    font-family: the-seasons-regular;
+    flex-basis: 10%;
+    margin-top: 1em;
+    margin-left: 1em;
+    transform: rotate(5deg);
+}
 h2 {
     margin: 1rem;
     text-transform: uppercase;
