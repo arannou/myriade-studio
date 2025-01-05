@@ -7,6 +7,8 @@ header {
     position: fixed;
     width: 78vw;
     padding-right: 2vh;
+
+    background: linear-gradient(180deg, rgba(209, 151, 106, 0.3) 50%, rgba(0,0,0,0) 100%);
 }
 .icon {
     overflow-x: hidden;
