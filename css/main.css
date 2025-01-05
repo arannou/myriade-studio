@@ -1,6 +1,7 @@
 /* MAIN */
 main {
     color: var(--brown);
+    width: 100vw;
 }
 h1 {
     font-size: 3rem;
@@ -129,7 +130,7 @@ p {
 
 
 
-/* page-mood-board */
+/* page-gallerie */
 
 #page-gallerie {
     background-color: var(--milk-chocolate);
@@ -138,11 +139,11 @@ p {
     overflow: hidden;
 }
 
-#page-mood-board .section-container{
+#page-gallerie .section-container{
     align-items: flex-end;
     justify-content: space-between;
 }
-#mood-board-left {
+#gallerie-left {
     align-items: flex-end;
 }
 #gallerie-middle {
@@ -179,7 +180,7 @@ img.round-top {
 
 /* page-about */
 #page-about {
-    background-color: white;
+    background-color: var(--ecru);
     padding: 4em;
 }
 #page-about .section-container {
@@ -281,4 +282,27 @@ h3 {
 #page-collection caption {
     font-style: italic;
     
+}
+
+/* page contact */
+#page-contact {
+    background-color: var(--brown-bkgd);
+    height: 100vh;
+}
+#page-contact .section-container {
+    height: 70vh;
+    color: white;
+    padding: 4em;
+}
+
+.contact-holder {
+    display: flex;
+    flex-direction: column;
+}
+.contact-title {
+    text-transform: uppercase;
+    font-size: .8em;
+}
+#page-contact .bottom-image {
+    width: 100vw;
 }
