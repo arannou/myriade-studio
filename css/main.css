@@ -47,7 +47,6 @@ h1 {
 }
 .page {
     padding: 2vh;
-    height: 96vh;
 }
 
 p {
@@ -60,6 +59,7 @@ p {
 
 #page-accueil {
     text-align: left;
+    height: 96vh;
 }
 #page-accueil .section-container{
     flex-direction: column-reverse;
@@ -133,6 +133,7 @@ p {
 /* page-gallerie */
 
 #page-gallerie {
+    height: 96vh;
     background-color: var(--milk-chocolate);
     background-size: cover;
     background-size: 100vw 100vh;
@@ -157,8 +158,12 @@ p {
     height: 100%;
 }
 
-#page-gallerie  img {
+#page-gallerie img {
     max-width: 100%;
+}
+#page-gallerie #image-1 {
+    max-height: 700px;
+    max-width: none;
 }
 #image-3 {
     margin: 20%;
@@ -172,6 +177,7 @@ img.round-top {
 #image-4 {
     margin: 10%;
     margin-right: 0;
+    max-height: 50vh;
 }
 #image-5 {
     margin-right: 20%;
@@ -195,11 +201,16 @@ img.round-top {
     align-content: end;
 }
 
+#page-about section:nth-child(2) div{
+    text-align: center;
+}
+
 #page-about img {
     max-width: 100%;
+    max-height: 700px;
 }
 #page-about p {
-    font-size: 12px;
+    font-size: 14px;
 }
 #page-about h3 {
     width: 100%;
@@ -268,7 +279,6 @@ img.round-top {
 #page-collection {
     background-color: var(--ecru);
     text-align: center;
-    height: auto;
 }
 #page-collection img {
     max-width: 100%;
@@ -289,7 +299,6 @@ img.round-top {
 /* page contact */
 #page-contact {
     background-color: var(--milk-chocolate);
-    height: auto;
 }
 #page-contact section:first-child {
     margin-right: 2rem;
