@@ -1,0 +1,373 @@
+/* MAIN */
+main {
+    color: var(--brown);
+    width: 100vw;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 1rem;
+    font-family: the-seasons-regular;
+}
+@media only screen and (min-width: 800px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+.address p {
+    margin: 0;
+}
+.address {
+    margin-bottom: .5rem;
+}
+
+
+@media only screen and (min-width: 800px) {
+    body {
+        background-image: url(../images/background.jpg);
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    .centered p {
+        font-size: 1.5rem;
+    }
+}
+
+.section-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+@media only screen and (min-width: 800px) {
+    .section-container {
+        flex-direction: row;
+    }
+}
+.page {
+    padding: 2vh;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+
+/* PAGE d'accueil */
+
+#page-accueil {
+    text-align: left;
+    height: 96vh;
+}
+#page-accueil .section-container{
+    flex-direction: column-reverse;
+}
+@media only screen and (min-width: 800px) {
+    #page-accueil .section-container {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+.travaillons {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.travaillons .social {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-evenly;
+}
+.travaillons .social a {
+    height: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+.travaillons .social img {
+    height: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+    .travaillons .social {
+        margin: 0 3rem;
+    }
+    .travaillons .social a {
+        height: 2.5rem;
+        margin: 0 1rem;
+    }
+}
+#page-accueil button {
+    color: var(--brown);
+    text-transform: uppercase;
+    background-color: white;
+    padding: .7rem 2rem;
+    border-radius: 1.5rem;
+
+}
+#page-accueil button:visited {
+    color: var(--brown);
+}
+
+#big-image {
+    margin: auto;
+    
+}
+#big-image img{
+    height: 80vh;
+}
+@media only screen and (min-width: 800px) {
+    #big-image {
+        margin-right: 6rem;
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+/* page-gallerie */
+
+#page-gallerie {
+    height: 96vh;
+    background-color: var(--milk-chocolate);
+    background-size: cover;
+    background-size: 100vw 100vh;
+    overflow: hidden;
+}
+
+#page-gallerie .section-container{
+    align-items: flex-end;
+    justify-content: space-between;
+}
+#gallerie-left {
+    align-items: flex-end;
+}
+#gallerie-middle {
+    max-width: 30vw;
+}
+#gallerie-middle, #gallerie-right {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#page-gallerie img {
+    max-width: 100%;
+}
+#page-gallerie #image-1 {
+    max-height: 700px;
+    max-width: none;
+}
+#image-3 {
+    margin: 20%;
+    margin-right: 0;
+}
+
+img.round-top {
+    border-top-left-radius: 50vw;
+    border-top-right-radius: 50vw;
+}
+#image-4 {
+    margin: 10%;
+    margin-right: 0;
+    max-height: 50vh;
+}
+#image-5 {
+    margin-right: 20%;
+}
+
+
+/* page-about */
+
+#page-about {
+    background-color: var(--ecru);
+    padding: 4em;
+}
+#page-about .section-container {
+    justify-content: space-between;
+}
+
+#page-about section {
+    flex-basis: 60%;
+}
+#page-about section:first-child, #page-about section:nth-child(2) {
+    align-content: end;
+}
+
+#page-about section:nth-child(2) div{
+    text-align: center;
+}
+
+#page-about img {
+    max-width: 100%;
+    max-height: 700px;
+}
+#page-about p {
+    font-size: 14px;
+}
+#page-about h3 {
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    font-size: 2em;
+    font-weight: normal;
+    margin-bottom: 2em;
+    font-family: the-seasons-regular;
+    color: var(--milk-chocolate)
+}
+
+/* page-services */
+
+#page-services {
+    padding: 4rem;
+    background-color: var(--sauge);
+    background-size: cover;
+    background-size: 100vw 100vh;
+}
+#page-services  img {
+    max-width: 25vw;
+}
+#services-head {
+    display: flex;
+}
+#services-head h2 {
+    margin: 1rem 3rem;
+    text-transform: uppercase;
+    flex-basis: 35%;
+}
+
+#services-head p {
+    border-bottom: 2px solid var(--brown);
+    padding-bottom: .7rem;
+    margin-right: 2rem;
+}
+
+#services-head a {
+    font-style: italic;
+}
+
+#page-services section {
+    text-align: center;
+}
+
+#page-services img {
+    width: 300px;
+}
+
+#page-services .section-container {
+    width: 100%;
+    justify-content: space-evenly;
+}
+#page-services .section-container p {
+    height: 3.7rem;
+    align-content: end;
+}
+#page-services hr {
+    width: 80%;
+    border-color: var(--brown);
+}
+
+.losange {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+
+/* PAGE COLLECTION */
+#page-collection {
+    background-color: var(--ecru);
+    text-align: center;
+}
+#page-collection img {
+    max-width: 100%;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+#page-collection figcaption {
+    font-style: italic;
+    
+}
+
+/* page contact */
+.page-contact-template {
+    background-color: var(--milk-chocolate);
+}
+.page-contact-template section:first-child {
+    margin-right: 2rem;
+}
+.page-contact-template .section-container {
+    color: white;
+    padding: 4em;
+}
+.page-contact-template h1 {
+    font-size: 3rem;
+}
+.page-contact-template p {
+    font-size: 12px;
+}
+
+.page-contact-template .social {
+    display: flex;
+}
+.contact-holder {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .5rem;
+}
+
+.contact-holder .contact-icon {
+    width: 32px;
+    flex-basis: 32px;
+    text-align: center;
+    align-self: center;
+}
+.contact-title {
+    text-transform: uppercase;
+    font-size: .8em;
+    margin-bottom: .5rem;
+}
+
+.contact-holder .content {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.contact-holder a, .contact-holder a:visited {
+    margin: 0 1rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+.page-contact-template .bottom-image img {
+    height: 20vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#page-actuality section:nth-child(2) {
+    align-content: end;
+}
+#page-actuality .curvy{
+    height: 5rem;
+    align-content: center;
+    display: block;
+    text-align: center;
+}
+
+#page-actuality span {
+    font-size: 3rem;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.curvy {
+    font-style: italic;
+}

@@ -1,0 +1,96 @@
+
+/* HEADER */
+header {
+    padding-left: 20%;
+    padding-top: .5rem;
+    display: flex;
+    position: fixed;
+    width: 78vw;
+    padding-right: 2vh;
+
+    background: linear-gradient(180deg, rgba(209, 151, 106, 0.3) 50%, rgba(0,0,0,0) 100%);
+}
+.icon {
+    overflow-x: hidden;
+    flex-grow: 1;
+}
+.flex-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+nav {
+    padding-bottom: .5rem;
+}
+nav > a, nav > a:visited {
+    font-family: raleway-regular;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    transition: color 200ms linear;
+}
+nav > a:focus, nav > a:hover {
+    color: var(--brown);
+    transition: color 200ms linear;
+}
+
+#burger {
+    padding: 1.2rem;
+}
+
+header #end-of-line button {
+    display: none;
+}
+@media only screen and (min-width: 800px) {
+    header #end-of-line button {
+        padding: 1.2rem 3rem;
+        display: initial;
+    }
+    #burger {
+        display: none;
+    }
+}
+
+header #end-of-line {
+    border: 1px white solid;
+    font-family: raleway-regular;
+    color: white;
+    margin: 1.2rem;
+    margin-left: 0;
+    background-color: transparent;
+    transition: background-color 800ms linear;
+}
+
+header #end-of-line button {
+    background-color: transparent;
+}
+
+header #end-of-line:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: background-color 800ms linear;
+}
+#logo-divider {
+    border: white solid 1px;
+    display: block;
+    width: 100px;
+    animation: expand-logo-divider 4s ease 1s 1 normal forwards;
+}
+@keyframes expand-logo-divider {
+    0% {
+		width: 100px;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+.icon p {
+    font-family: avant-garde;
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+}
+
+
