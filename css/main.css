@@ -166,8 +166,8 @@ p {
 }
 
 img.round-top {
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
+    border-top-left-radius: 50vw;
+    border-top-right-radius: 50vw;
 }
 #image-4 {
     margin: 10%;
@@ -179,6 +179,7 @@ img.round-top {
 
 
 /* page-about */
+
 #page-about {
     background-color: var(--ecru);
     padding: 4em;
@@ -190,17 +191,17 @@ img.round-top {
 #page-about section {
     flex-basis: 60%;
 }
-#page-about section:first-child {
-    flex-basis: 30%;
+#page-about section:first-child, #page-about section:nth-child(2) {
+    align-content: end;
 }
-#page-about section:first-child div {
-    text-align: center;
+
+#page-about img {
+    max-width: 100%;
 }
-#page-about section:first-child p {
-    margin-left: 0;
-    margin-right: 0;
+#page-about p {
+    font-size: 12px;
 }
-h3 {
+#page-about h3 {
     width: 100%;
     text-align: center;
     font-style: italic;
@@ -208,6 +209,7 @@ h3 {
     font-weight: normal;
     margin-bottom: 2em;
     font-family: the-seasons-regular;
+    color: var(--milk-chocolate)
 }
 
 /* page-services */
@@ -286,23 +288,55 @@ h3 {
 
 /* page contact */
 #page-contact {
-    background-color: var(--brown-bkgd);
-    height: 100vh;
+    background-color: var(--milk-chocolate);
+    height: auto;
+}
+#page-contact section:first-child {
+    margin-right: 2rem;
 }
 #page-contact .section-container {
-    height: 70vh;
     color: white;
     padding: 4em;
 }
+#page-contact h1 {
+    font-size: 3rem;
+}
+#page-contact p {
+    font-size: 12px;
+}
 
+#page-contact .social {
+    display: flex;
+}
 .contact-holder {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-bottom: .5rem;
+}
+
+.contact-holder .contact-icon {
+    width: 32px;
+    flex-basis: 32px;
+    text-align: center;
+    align-self: center;
 }
 .contact-title {
     text-transform: uppercase;
     font-size: .8em;
+    margin-bottom: .5rem;
 }
-#page-contact .bottom-image {
+
+.contact-holder .content {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.contact-holder a, .contact-holder a:visited {
+    margin: 0 1rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+#page-contact .bottom-image img {
+    height: 20vh;
     width: 100vw;
+    object-fit: cover;
 }
