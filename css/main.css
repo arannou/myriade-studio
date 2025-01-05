@@ -225,3 +225,26 @@ p {
 .losange {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
+
+
+/* PAGE COLLECTION */
+#page-collection {
+    background-color: var(--ecru);
+    text-align: center;
+    height: auto;
+}
+#page-collection img {
+    max-width: 100%;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+#page-collection caption {
+    font-style: italic;
+    
+}
