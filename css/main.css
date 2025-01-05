@@ -179,14 +179,30 @@ p {
 
 #page-services {
     padding: 4rem;
-    background-color: var(--beige);
+    background-color: var(--sauge);
     background-size: cover;
     background-size: 100vw 100vh;
 }
-
-h2 {
-    margin: 1rem;
+#page-services  img {
+    max-width: 25vw;
+}
+#services-head {
+    display: flex;
+}
+#services-head h2 {
+    margin: 1rem 3rem;
     text-transform: uppercase;
+    flex-basis: 35%;
+}
+
+#services-head p {
+    border-bottom: 2px solid var(--brown);
+    padding-bottom: .7rem;
+    margin-right: 2rem;
+}
+
+#services-head a {
+    font-style: italic;
 }
 
 #page-services section {
@@ -197,6 +213,10 @@ h2 {
     width: 300px;
 }
 
+#page-services .section-container p {
+    height: 3.7rem;
+    align-content: end;
+}
 #page-services hr {
     width: 80%;
     border-color: var(--brown);
