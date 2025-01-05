@@ -261,6 +261,10 @@ img.round-top {
     width: 300px;
 }
 
+#page-services .section-container {
+    width: 100%;
+    justify-content: space-evenly;
+}
 #page-services .section-container p {
     height: 3.7rem;
     align-content: end;
@@ -291,7 +295,7 @@ img.round-top {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
 }
-#page-collection caption {
+#page-collection figcaption {
     font-style: italic;
     
 }
