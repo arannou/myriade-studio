@@ -1,6 +1,9 @@
 :root {
 	--beige: #d0b28e;
     --brown: #69443C;
+    --milk-chocolate: #8B5536;
+    --caramel: #D1966A;
+    --sauge: #A9BFB9;
     --dark-hover: rgba(0, 0, 0, .8);
     --header: rgba(0, 0, 0, 0.5)
 }
