@@ -46,6 +46,7 @@
     }
     header #end-of-line {  
         margin: 1.2rem;
+        margin-left: 0;
     }
     header #end-of-line button {
         padding: 1.2rem 3rem;

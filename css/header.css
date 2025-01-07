@@ -3,7 +3,7 @@
 header {
     padding-left: 20%;
     padding-top: .5rem;
-
+    z-index: 10;
     position: fixed;
     width: 78vw;
     padding-right: 2vh;
@@ -33,6 +33,7 @@ header .bar {
 #nav-mobile a {
     border-top: 1px solid white;
     padding-bottom: .5rem;
+    margin-right: 5.5rem;
 }
 nav > a, nav > a:visited {
     font-family: raleway-regular;
@@ -45,10 +46,6 @@ nav > a, nav > a:visited {
 nav > a:focus, nav > a:hover {
     color: var(--brown);
     transition: color 200ms linear;
-}
-
-#burger {
-    padding: 1.2rem;
 }
 
 header #end-of-line button {
@@ -96,3 +93,18 @@ header #end-of-line:hover {
 }
 
 
+/* ANIMATION OPEN */
+
+#burger {
+    padding: 1.2rem;
+    cursor: pointer;
+}
+#nav-mobile {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+#nav-mobile.open {
+    height: 132px;
+    transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
