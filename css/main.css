@@ -3,55 +3,12 @@ main {
     color: var(--brown);
     width: 100vw;
 }
-h1 {
-    font-size: 3rem;
-    font-weight: normal;
-    margin: 1rem;
-    font-family: the-seasons-regular;
-}
-@media only screen and (min-width: 800px) {
-    h1 {
-        font-size: 5rem;
-    }
-}
 
 .address p {
     margin: 0;
 }
 .address {
     margin-bottom: .5rem;
-}
-
-
-@media only screen and (min-width: 800px) {
-    body {
-        background-image: url(../images/background.jpg);
-    }
-    h1 {
-        font-size: 5rem;
-    }
-    .centered p {
-        font-size: 1.5rem;
-    }
-}
-
-.section-container {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-}
-@media only screen and (min-width: 800px) {
-    .section-container {
-        flex-direction: row;
-    }
-}
-.page {
-    padding: 2vh;
-}
-
-p {
-    font-size: 1.5rem;
-    margin: 1rem;
 }
 
 
@@ -63,12 +20,6 @@ p {
 }
 #page-accueil .section-container{
     flex-direction: column-reverse;
-}
-@media only screen and (min-width: 800px) {
-    #page-accueil .section-container {
-        flex-direction: row;
-        align-items: flex-end;
-    }
 }
 
 .travaillons {
@@ -92,16 +43,6 @@ p {
 .travaillons .social img {
     height: 2rem;
 }
-
-@media only screen and (min-width: 800px) {
-    .travaillons .social {
-        margin: 0 3rem;
-    }
-    .travaillons .social a {
-        height: 2.5rem;
-        margin: 0 1rem;
-    }
-}
 #page-accueil button {
     color: var(--brown);
     text-transform: uppercase;
@@ -121,13 +62,6 @@ p {
 #big-image img{
     height: 80vh;
 }
-@media only screen and (min-width: 800px) {
-    #big-image {
-        margin-right: 6rem;
-        margin-bottom: 3rem;
-    }
-}
-
 
 
 /* page-gallerie */

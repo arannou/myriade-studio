@@ -25,30 +25,38 @@
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/laptop.css" />
 
 </head>
 
 <body>
     <header>
-        <div class="icon">
-            <div class="flex-row">
-                <p>myriade</p>
-                <nav>
-                    <a href="#page-about">Le studio</a>
-                    <a href="#page-collection">Collection</a>
-                    <a href="#page-actuality">Actualités</a>
-                </nav>
+        <div class="bar">
+            <div class="icon">
+                <div class="flex-row">
+                    <p>myriade</p>
+                    <nav id="nav-desktop">
+                        <a href="#page-about">Le studio</a>
+                        <a href="#page-collection">Collection</a>
+                        <a href="#page-actuality">Actualités</a>
+                    </nav>
 
+                </div>
+                <span id="logo-divider"></span>
+                <p>studio</p>
             </div>
-            <span id="logo-divider"></span>
-            <p>studio</p>
-        </div>
-        <div id="end-of-line">
-            <button class="mail-copy">Contactez-moi</button>
-            <div id="burger">
-                <img width="28" alt="Ouvrir le menu" src="images/icons/burger-icon.svg" />
+            <div id="end-of-line">
+                <button class="mail-copy">Contactez-moi</button>
+                <div id="burger">
+                    <img width="28" alt="Ouvrir le menu" src="images/icons/burger-icon.svg" />
+                </div>
             </div>
         </div>
+        <nav id="nav-mobile">
+            <a href="#page-about">Le studio</a>
+            <a href="#page-collection">Collection</a>
+            <a href="#page-actuality">Actualités</a>
+        </nav>
 
     </header>
 

@@ -3,12 +3,15 @@
 header {
     padding-left: 20%;
     padding-top: .5rem;
-    display: flex;
+
     position: fixed;
     width: 78vw;
     padding-right: 2vh;
 
     background: linear-gradient(180deg, rgba(209, 151, 106, 0.3) 50%, rgba(0,0,0,0) 100%);
+}
+header .bar {
+    display: flex;
 }
 .icon {
     overflow-x: hidden;
@@ -20,7 +23,15 @@ header {
     justify-content: space-between;
 }
 
-nav {
+#nav-desktop {
+    display: none;
+}
+#nav-mobile {
+    display: flex;
+    flex-direction: column;
+}
+#nav-mobile a {
+    border-top: 1px solid white;
     padding-bottom: .5rem;
 }
 nav > a, nav > a:visited {
@@ -43,21 +54,12 @@ nav > a:focus, nav > a:hover {
 header #end-of-line button {
     display: none;
 }
-@media only screen and (min-width: 800px) {
-    header #end-of-line button {
-        padding: 1.2rem 3rem;
-        display: initial;
-    }
-    #burger {
-        display: none;
-    }
-}
 
 header #end-of-line {
     border: 1px white solid;
     font-family: raleway-regular;
     color: white;
-    margin: 1.2rem;
+    margin: .6rem 1.2rem;
     margin-left: 0;
     background-color: transparent;
     transition: background-color 800ms linear;

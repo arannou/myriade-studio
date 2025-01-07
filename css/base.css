@@ -26,8 +26,7 @@ body {
     background-color: var(--beige);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: url(../images/background-phone.jpg); */
-    /* background-image: url(../images/background-pcd.png); */
+    background-image: url(../images/background-phone.jpg);
 
     margin: 0;
     font-family: raleway-regular;
@@ -36,12 +35,6 @@ body {
     flex-direction: column;
     height: 100vh;
     scroll-behavior: smooth;
-}
-@media only screen and (min-width: 800px) {
-    body {
-        /* background-image: url(../images/background.jpg); */
-        /* background-image: url(../images/background-pcd.png); */
-    }
 }
 
 button:hover {
@@ -52,4 +45,25 @@ button:hover {
 button {
     border: none;
     outline: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 1rem;
+    font-family: the-seasons-regular;
+}
+
+.section-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.page {
+    padding: 2vh;
+}
+
+p {
+    font-size: 1rem;
+    margin: 1rem;
 }
