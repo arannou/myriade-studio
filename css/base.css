@@ -24,9 +24,6 @@
 
 body {
     background-color: var(--beige);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../images/background-phone.jpg);
 
     margin: 0;
     font-family: raleway-regular;

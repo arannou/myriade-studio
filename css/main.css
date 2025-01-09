@@ -17,6 +17,9 @@ main {
 #page-accueil {
     text-align: left;
     height: 96vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/background-phone.jpg);
 }
 #page-accueil .section-container{
     flex-direction: column-reverse;
@@ -292,6 +295,18 @@ img.round-top {
     font-size: 3rem;
     font-family:Georgia, 'Times New Roman', Times, serif
 }
+
+#page-actuality .social img {
+    max-width: 60vw;
+    margin: auto;
+}
+#page-actuality #mobile {
+    display: initial;
+}
+#page-actuality #desktop {
+    display: none;
+}
+
 .curvy {
     font-style: italic;
 }
