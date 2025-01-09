@@ -64,6 +64,9 @@ main {
 }
 #big-image img{
     height: 80vh;
+    max-width: 80vw;
+    object-fit: contain;
+    object-position: bottom;
 }
 
 
@@ -236,10 +239,10 @@ img.round-top {
 }
 .page-contact-template .section-container {
     color: white;
-    padding: 4em;
+    padding: 1em;
 }
 .page-contact-template h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .page-contact-template p {
     font-size: 12px;

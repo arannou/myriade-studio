@@ -138,6 +138,13 @@
     }
 
     /* page-actuality */
+    .page-contact-template .section-container {
+        padding: 4em;
+    }
+    .page-contact-template h1 {
+        font-size: 3rem;
+    }
+
     #page-actuality #mobile {
         display: none;
     }
