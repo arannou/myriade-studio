@@ -12,6 +12,9 @@
     p {
         font-size: 1.5rem;
     }
+    span {
+        font-size: 1rem;
+    }
 
     /* HEADER */
     header .bar{
@@ -116,4 +119,21 @@
         margin-right: 20%;
     }
 
+    /* page-services */
+    #services-head {
+        flex-direction: row;
+    }
+    #page-services .section-container p {
+        height: 3.7rem;
+        align-content: end;
+    }
+
+    /* PAGE COLLECTION */
+    .grid-container {
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+    }
+    #page-collection figcaption {
+        font-size: 1rem;
+    }
 }
