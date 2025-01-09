@@ -3,12 +3,15 @@
 header {
     padding-left: 20%;
     padding-top: .5rem;
-    display: flex;
+    z-index: 10;
     position: fixed;
     width: 78vw;
     padding-right: 2vh;
 
     background: linear-gradient(180deg, rgba(209, 151, 106, 0.3) 50%, rgba(0,0,0,0) 100%);
+}
+header .bar {
+    display: flex;
 }
 .icon {
     overflow-x: hidden;
@@ -20,8 +23,17 @@ header {
     justify-content: space-between;
 }
 
-nav {
+#nav-desktop {
+    display: none;
+}
+#nav-mobile {
+    display: flex;
+    flex-direction: column;
+}
+#nav-mobile a {
+    border-top: 1px solid white;
     padding-bottom: .5rem;
+    margin-right: 5.5rem;
 }
 nav > a, nav > a:visited {
     font-family: raleway-regular;
@@ -36,28 +48,15 @@ nav > a:focus, nav > a:hover {
     transition: color 200ms linear;
 }
 
-#burger {
-    padding: 1.2rem;
-}
-
 header #end-of-line button {
     display: none;
-}
-@media only screen and (min-width: 800px) {
-    header #end-of-line button {
-        padding: 1.2rem 3rem;
-        display: initial;
-    }
-    #burger {
-        display: none;
-    }
 }
 
 header #end-of-line {
     border: 1px white solid;
     font-family: raleway-regular;
     color: white;
-    margin: 1.2rem;
+    margin: .6rem 1.2rem;
     margin-left: 0;
     background-color: transparent;
     transition: background-color 800ms linear;
@@ -94,3 +93,18 @@ header #end-of-line:hover {
 }
 
 
+/* ANIMATION OPEN */
+
+#burger {
+    padding: 1.2rem;
+    cursor: pointer;
+}
+#nav-mobile {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+#nav-mobile.open {
+    height: 132px;
+    transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
