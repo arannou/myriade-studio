@@ -13,10 +13,12 @@
     letter-spacing: .25rem;
     src: url(../font/Raleway-Regular.ttf);
 }
+/* titles */
 @font-face {
-    font-family: the-seasons-regular;
-    src: url(../font/Fontspring-DEMO-theseasons-reg.otf);
+    font-family: belgiano-serif;
+    src: url(../font/Belgiano-Serif-2.otf);
 }
+/* For icon */
 @font-face {
     font-family: avant-garde;
     src: url(../font/ITCAvantGardeStd-XLt.otf);
@@ -48,7 +50,7 @@ h1 {
     font-size: 3rem;
     font-weight: normal;
     margin: 1rem;
-    font-family: the-seasons-regular;
+    font-family: belgiano-serif;
 }
 
 .section-container {

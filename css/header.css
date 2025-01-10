@@ -50,11 +50,13 @@ nav > a:focus, nav > a:hover {
 
 header #end-of-line button {
     display: none;
+    font-family: raleway-regular;
+    font-size: 1rem;
+    color: var(--brown);
 }
 
 header #end-of-line {
     border: 1px white solid;
-    font-family: raleway-regular;
     color: white;
     margin: .6rem 1.2rem;
     margin-left: 0;
