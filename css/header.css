@@ -47,9 +47,13 @@ nav > a:focus, nav > a:hover {
     color: var(--brown);
     transition: color 200ms linear;
 }
-
-header #end-of-line button {
+#contact-me a:visited {
+    color: var(--brown);
+    text-decoration: none;
+}
+#contact-me a {
     display: none;
+    text-decoration: none;
     font-family: raleway-regular;
     font-size: 1rem;
     color: var(--brown);
@@ -64,7 +68,7 @@ header #end-of-line {
     transition: background-color 800ms linear;
 }
 
-header #end-of-line button {
+header #end-of-line #contact-me {
     background-color: transparent;
 }
 

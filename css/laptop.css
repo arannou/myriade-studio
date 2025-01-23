@@ -48,8 +48,10 @@
         margin: 1.2rem;
         margin-left: 0;
     }
-    header #end-of-line button {
+    header #end-of-line #contact-me {
         padding: 1.2rem 3rem;
+    }
+    #contact-me a {
         display: initial;
     }
 
@@ -150,5 +152,13 @@
     }
     #page-actuality #desktop {
         display: initial;
+    }
+
+    .page-contact-template p {
+        font-size: 1rem;
+    }
+
+    #map img {
+        max-width: 50vw;
     }
 }

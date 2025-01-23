@@ -46,17 +46,6 @@ main {
 .travaillons .social img {
     height: 2rem;
 }
-#page-accueil button {
-    color: var(--brown);
-    text-transform: uppercase;
-    background-color: white;
-    padding: .7rem 2rem;
-    border-radius: 1.5rem;
-
-}
-#page-accueil button:visited {
-    color: var(--brown);
-}
 
 #big-image {
     margin: auto;
@@ -274,7 +263,7 @@ img.round-top {
     margin-top: 0;
     margin-bottom: 0;
 }
-.contact-holder a, .contact-holder a:visited {
+.page-contact-template a, .page-contact-template a:visited {
     margin: 0;
     color: white;
     text-decoration: none;
@@ -284,7 +273,10 @@ img.round-top {
     width: 100vw;
     object-fit: cover;
 }
-
+#page-actuality .section-container {
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
 #page-actuality section:nth-child(2) {
     align-content: end;
 }
@@ -309,6 +301,14 @@ img.round-top {
 }
 #page-actuality #desktop {
     display: none;
+}
+
+#map {
+    text-align: center;
+}
+#map img {
+    width: 90vw;
+    margin: auto;
 }
 
 .curvy {
