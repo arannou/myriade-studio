@@ -141,6 +141,7 @@ img.round-top {
 }
 #page-about p {
     font-size: 14px;
+    text-align: justify;
 }
 #page-about h3 {
     width: 100%;
@@ -274,7 +275,7 @@ img.round-top {
     margin-bottom: 0;
 }
 .contact-holder a, .contact-holder a:visited {
-    margin: 0 1rem 1rem;
+    margin: 0;
     color: white;
     text-decoration: none;
 }
