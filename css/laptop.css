@@ -126,6 +126,13 @@
         margin-right: 20%;
     }
 
+    /* page-video */
+    #page-videoteque .row {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+    }
+
+
     /* page-services */
     #services-head {
         flex-direction: row;

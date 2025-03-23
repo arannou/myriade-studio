@@ -143,6 +143,19 @@ img.round-top {
     color: var(--milk-chocolate)
 }
 
+/* page-video */
+#page-videoteque {
+    padding: 4vh;
+    text-align: center;
+}
+#page-videoteque .row {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+}
+#page-videoteque figure {
+    margin: 0;
+}
+
 /* page-services */
 
 #page-services {
@@ -242,6 +255,7 @@ img.round-top {
 
 .page-contact-template .social {
     display: flex;
+    margin-left: 1rem;
 }
 .contact-holder {
     display: flex;
@@ -274,12 +288,12 @@ img.round-top {
     height: 20vh;
     width: 100vw;
     object-fit: cover;
+    margin-bottom: 2rem;
 }
 #page-contact {
-    background-image: url(../images/background-laptop.png);
-    background-position-x: right;
+    background-image: url(../images/background-beige.png);
     background-repeat: no-repeat;
-    background-size: 140%;
+    background-size: cover;
 }
 #page-actuality .section-container {
     padding-top: 0;
