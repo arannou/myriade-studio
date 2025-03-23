@@ -136,9 +136,14 @@
     }
 
     /* PAGE COLLECTION */
-    .grid-container {
-        grid-column-gap: 2rem;
-        grid-row-gap: 2rem;
+    .collection-container .row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 4vw;
+        grid-row-gap: 4vw;
+    }
+    #page-collection {
+        padding: 2vh 20vh;
     }
     #page-collection figcaption {
         font-size: 1rem;
