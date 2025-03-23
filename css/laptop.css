@@ -58,11 +58,16 @@
     /* PAGE d'accueil */
     #page-accueil {
         background-image: url(../images/background-laptop.png);
+        background-position-x: -2rem;
     }
     #page-accueil .section-container {
         flex-direction: row;
         align-items: flex-end;
     }
+    #home-text {
+        margin: 2rem 14rem;
+    }
+    
     .travaillons .social {
         margin: 0 3rem;
     }
