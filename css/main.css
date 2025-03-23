@@ -275,6 +275,12 @@ img.round-top {
     width: 100vw;
     object-fit: cover;
 }
+#page-contact {
+    background-image: url(../images/background-laptop.png);
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 140%;
+}
 #page-actuality .section-container {
     padding-top: 0;
     padding-bottom: 1rem;
