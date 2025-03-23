@@ -57,7 +57,7 @@
 
     /* PAGE d'accueil */
     #page-accueil {
-        background-image: url(../images/Fond\ arceaux\ beige\ amélioré.png);
+        background-image: url(../images/background-laptop.png);
     }
     #page-accueil .section-container {
         flex-direction: row;
