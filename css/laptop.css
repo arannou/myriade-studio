@@ -57,12 +57,17 @@
 
     /* PAGE d'accueil */
     #page-accueil {
-        background-image: url(../images/Fond\ arceaux\ beige\ amélioré.png);
+        background-image: url(../images/background-laptop.png);
+        background-position-x: -2rem;
     }
     #page-accueil .section-container {
         flex-direction: row;
         align-items: flex-end;
     }
+    #home-text {
+        margin: 2rem 14rem;
+    }
+    
     .travaillons .social {
         margin: 0 3rem;
     }
@@ -121,6 +126,13 @@
         margin-right: 20%;
     }
 
+    /* page-video */
+    #page-videoteque .row {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+    }
+
+
     /* page-services */
     #services-head {
         flex-direction: row;
@@ -131,9 +143,14 @@
     }
 
     /* PAGE COLLECTION */
-    .grid-container {
-        grid-column-gap: 2rem;
-        grid-row-gap: 2rem;
+    .collection-container .row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 4vw;
+        grid-row-gap: 4vw;
+    }
+    #page-collection {
+        padding: 2vh 20vh;
     }
     #page-collection figcaption {
         font-size: 1rem;

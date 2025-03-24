@@ -69,3 +69,7 @@ p {
 span {
     font-size: .75rem;
 }
+
+video {
+    width: 100%;
+}
