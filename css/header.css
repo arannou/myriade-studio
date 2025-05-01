@@ -48,7 +48,7 @@ nav > a:focus, nav > a:hover {
     transition: color 200ms linear;
 }
 #contact-me a:visited {
-    color: var(--brown);
+    color: white;
     text-decoration: none;
 }
 #contact-me a {
@@ -56,7 +56,7 @@ nav > a:focus, nav > a:hover {
     text-decoration: none;
     font-family: raleway-regular;
     font-size: 1rem;
-    color: var(--brown);
+    color: white;
 }
 
 header #end-of-line {
@@ -73,8 +73,8 @@ header #end-of-line #contact-me {
 }
 
 header #end-of-line:hover {
-    background-color: rgba(255, 255, 255, 0.6);
-    transition: background-color 800ms linear;
+    background-color: rgba(255, 255, 255, 0.293);
+    transition: background-color 600ms linear;
 }
 #logo-divider {
     border: white solid 1px;

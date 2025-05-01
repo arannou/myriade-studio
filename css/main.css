@@ -183,9 +183,6 @@ img.round-top {
     margin-right: 2rem;
 }
 
-#services-head a {
-    font-style: italic;
-}
 
 #page-services section {
     text-align: center;
@@ -203,10 +200,6 @@ img.round-top {
 #page-services hr {
     width: 80%;
     border-color: var(--brown);
-}
-
-.losange {
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 

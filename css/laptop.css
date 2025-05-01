@@ -82,9 +82,6 @@
 
     /* page-gallerie */
 
-    #page-gallerie {
-        max-height: 96vh;
-    }
     #page-gallerie .section-container{
         align-items: normal;
     }
