@@ -123,6 +123,12 @@
         margin-right: 20%;
     }
 
+    /* page studio */
+    #image-atelier img {
+        width: 30vw;
+        margin: 3rem;
+    }
+
     /* page-video */
     #page-videoteque .row {
         grid-template-columns: repeat(3, 1fr);

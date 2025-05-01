@@ -103,6 +103,25 @@ img.round-top {
     margin: 4rem 1rem 0 0;
 }
 
+
+/* page studio */
+
+#page-studio {
+    background-color: var(--sauge);
+}
+
+#page-studio p {
+    margin-left: 0;
+}
+
+#image-atelier {
+    text-align: center;
+}
+#image-atelier img {
+    width: 90%;
+    width: -webkit-fill-available;
+    margin: 3rem;
+}
 /* page-about */
 
 #page-about {
