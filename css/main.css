@@ -247,8 +247,10 @@ img.round-top {
 }
 
 .page-contact-template .social {
-    display: flex;
     margin-left: 1rem;
+}
+.page-contact-template .social img {
+    width: 50px;
 }
 .contact-holder {
     display: flex;
@@ -307,7 +309,7 @@ img.round-top {
     font-family:Georgia, 'Times New Roman', Times, serif
 }
 
-#page-actuality .social img {
+#page-actuality .revelations img {
     max-width: 60vw;
     margin: auto;
 }
