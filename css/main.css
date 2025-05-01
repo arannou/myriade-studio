@@ -105,7 +105,6 @@ img.round-top {
 
 
 /* page studio */
-
 #page-studio {
     background-color: var(--sauge);
 }
@@ -121,6 +120,33 @@ img.round-top {
     width: 90%;
     width: -webkit-fill-available;
     margin: 3rem;
+}
+
+
+
+/* page parcours */
+#page-parcours {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: var(--milk-chocolate);
+    color: white
+}
+#page-parcours img {
+    width: 90%;
+    width: -webkit-fill-available;
+}
+#page-parcours section:first-child {
+    margin-top: 3rem;
+    position: relative;
+}
+#page-parcours section:nth-child(2) {
+    padding: 3rem;
+}
+#page-parcours h2 {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    /* color: white; */
 }
 
 /* page-video */

@@ -40,6 +40,17 @@
         border-top: none
     }
 
+    nav > a, nav > a:visited {
+        color: white;
+        background-color: transparent;
+        transition: color 200ms linear;
+    }
+    nav > a:focus, nav > a:hover {
+        color: var(--brown);
+        background-color: transparent;
+        transition: color 200ms linear;
+    }
+
     .section-flex {
         flex-direction: row;
         flex-wrap: wrap;
@@ -127,6 +138,14 @@
     #image-atelier img {
         width: 30vw;
         margin: 3rem;
+    }
+    #page-parcours p, #page-studio p {
+        font-size: 1.25rem;
+    }
+
+    /* page parcours */
+    #page-parcours img {
+        width: 45vw;
     }
 
     /* page-video */

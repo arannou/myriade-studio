@@ -40,6 +40,19 @@ nav > a, nav > a:visited {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
+    background-color: rgba(209, 151, 106, 0.3);
+    padding: 1rem;
+    transition: background-color 200ms linear;
+}
+nav > a:focus, nav > a:hover {
+    background-color: rgba(209, 151, 106, 0.678);
+    transition: background-color 200ms linear;
+}
+nav > a, nav > a:visited {
+    font-family: raleway-regular;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
     padding: 1rem;
     transition: color 200ms linear;
 }
@@ -111,6 +124,6 @@ header #end-of-line:hover {
     transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 #nav-mobile.open {
-    height: 132px;
+    height: 220px;
     transition: height 1s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
