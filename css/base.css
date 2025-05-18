@@ -76,3 +76,15 @@ video {
 .display-flex {
     display: flex;
 }
+
+.white-frame {
+    color: white;
+    border: 1px white solid;
+    padding: 0.5rem;
+    width: fit-content;
+}
+
+img.round-top {
+    border-top-left-radius: 50vw;
+    border-top-right-radius: 50vw;
+}

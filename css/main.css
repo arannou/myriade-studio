@@ -59,58 +59,19 @@ main {
 }
 
 
-/* page-gallerie */
-
-#page-gallerie {
-    background-color: var(--milk-chocolate);
-    background-size: cover;
-    background-size: 100vw 100vh;
-    overflow: hidden;
-}
-
-#page-gallerie .section-container{
-    align-items: flex-end;
-    justify-content: space-between;
-}
-
-img.round-top {
-    border-top-left-radius: 50vw;
-    border-top-right-radius: 50vw;
-}
-
-#gallerie-left {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-#gallerie-middle, #gallerie-right {
-    display: flex;
-    align-items: flex-start;
-}
-#page-gallerie img {
-    max-width: 100%;
-    width: 45%;
-    object-fit: contain;
-}
-
-#image-3 {
-    margin: 3rem 1rem 1rem;
-}
-#image-4 {
-    margin-right: 3rem;
-}
-
-#image-5 {
-    margin: 4rem 1rem 0 0;
-}
-
-
 /* page studio */
 #page-studio {
     background-color: var(--sauge);
+    padding-right: 4rem;
 }
 
 #page-studio p {
     margin-left: 0;
+    text-align: justify;
+}
+#page-studio h2 {
+    color: white;
+    text-align: right;
 }
 
 #image-atelier {
@@ -135,18 +96,20 @@ img.round-top {
     width: 90%;
     width: -webkit-fill-available;
 }
-#page-parcours section:first-child {
+#page-parcours section:nth-child(2) {
     margin-top: 3rem;
     position: relative;
 }
-#page-parcours section:nth-child(2) {
+#page-parcours section:first-child {
     padding: 3rem;
 }
 #page-parcours h2 {
     position: absolute;
     top: 0;
-    right: 1rem;
-    /* color: white; */
+    right: 4rem;
+}
+#page-parcours p {
+    text-align: justify;
 }
 
 /* page-video */
@@ -231,7 +194,7 @@ img.round-top {
     font-style: italic;
     font-size: .75rem;
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
 }
 
 /* page contact */
@@ -247,12 +210,14 @@ img.round-top {
 }
 .page-contact-template h1 {
     font-size: 2rem;
+    border-bottom: 1px solid white;
 }
 .page-contact-template p {
     font-size: 12px;
 }
 
 .page-contact-template .social {
+    display: flex;
     margin-left: 1rem;
 }
 .page-contact-template .social img {
@@ -270,12 +235,19 @@ img.round-top {
     text-align: center;
     align-self: center;
 }
+.contact-holder .contact-icon img {
+ max-width: 32px;   
+}
 .contact-title {
+    border-top: 1px solid white;
     text-transform: uppercase;
     font-size: .8em;
     margin-bottom: .5rem;
+    padding-top: 1rem;
 }
-
+.contact-holder>*:nth-child(2) {
+    flex-grow: 2;
+}
 .contact-holder .content {
     margin-top: 0;
     margin-bottom: 0;

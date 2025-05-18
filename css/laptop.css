@@ -1,7 +1,7 @@
 @media only screen and (min-width: 800px) {
     /* MAIN */
     h1 {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
     .section-container {
         flex-direction: row;
@@ -68,7 +68,7 @@
 
     /* PAGE d'accueil */
     #page-accueil {
-        background-image: url(../images/background-laptop.png);
+        background-image: url(../images/background-laptop.jpg);
         background-position-x: -2rem;
     }
     #page-accueil .section-container {
@@ -76,11 +76,13 @@
         align-items: flex-end;
     }
     #home-text {
-        margin: 2rem 14rem;
+        margin: 2rem;
+        margin-left: 18%;
     }
     
     .travaillons .social {
-        margin: 0 3rem;
+        margin: 0;
+        margin-right: 1rem;
     }
     .travaillons .social a {
         height: 2.5rem;
@@ -89,49 +91,7 @@
     #big-image {
         margin-right: 6rem;
         margin-bottom: 3rem;
-    }
-
-    /* page-gallerie */
-
-    #page-gallerie .section-container{
-        align-items: normal;
-    }
-    #page-gallerie img {
-        width: auto;
-    }
-    #page-gallerie .section {
-        display: flex;
-    }
-    #gallerie-left {
-        display: flex;
-        align-items: flex-end;
-    }
-    #gallerie-middle {
-        max-width: 30vw;
-    }
-    #gallerie-middle, #gallerie-right {
-        margin-left: 2rem;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        align-items: inherit;
-    }
-
-    #page-gallerie #image-1 {
-        width: auto;
-    }
-    #image-3 {
-        margin: 20%;
-        margin-right: 0;
-    }
-
-    #image-4 {
-        margin: 10%;
-        margin-right: 0;
-        max-height: 50vh;
-    }
-    #image-5 {
-        margin-right: 20%;
+        width: 30%;
     }
 
     /* page studio */
