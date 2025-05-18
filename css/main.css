@@ -90,17 +90,17 @@ main {
     width: 90%;
     width: -webkit-fill-available;
 }
-#page-parcours section:first-child {
+#page-parcours section:nth-child(2) {
     margin-top: 3rem;
     position: relative;
 }
-#page-parcours section:nth-child(2) {
+#page-parcours section:first-child {
     padding: 3rem;
 }
 #page-parcours h2 {
     position: absolute;
     top: 0;
-    right: 1rem;
+    right: 4rem;
     /* color: white; */
 }
 
