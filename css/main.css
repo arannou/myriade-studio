@@ -59,51 +59,6 @@ main {
 }
 
 
-/* page-gallerie */
-
-#page-gallerie {
-    background-color: var(--milk-chocolate);
-    background-size: cover;
-    background-size: 100vw 100vh;
-    overflow: hidden;
-}
-
-#page-gallerie .section-container{
-    align-items: flex-end;
-    justify-content: space-between;
-}
-
-img.round-top {
-    border-top-left-radius: 50vw;
-    border-top-right-radius: 50vw;
-}
-
-#gallerie-left {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-#gallerie-middle, #gallerie-right {
-    display: flex;
-    align-items: flex-start;
-}
-#page-gallerie img {
-    max-width: 100%;
-    width: 45%;
-    object-fit: contain;
-}
-
-#image-3 {
-    margin: 3rem 1rem 1rem;
-}
-#image-4 {
-    margin-right: 3rem;
-}
-
-#image-5 {
-    margin: 4rem 1rem 0 0;
-}
-
-
 /* page studio */
 #page-studio {
     background-color: var(--sauge);
