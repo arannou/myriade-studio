@@ -68,7 +68,7 @@
 
     /* PAGE d'accueil */
     #page-accueil {
-        background-image: url(../images/background-laptop.png);
+        background-image: url(../images/background-laptop.jpg);
         background-position-x: -2rem;
     }
     #page-accueil .section-container {
