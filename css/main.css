@@ -62,10 +62,16 @@ main {
 /* page studio */
 #page-studio {
     background-color: var(--sauge);
+    padding-right: 4rem;
 }
 
 #page-studio p {
     margin-left: 0;
+    text-align: justify;
+}
+#page-studio h2 {
+    color: white;
+    text-align: right;
 }
 
 #image-atelier {
@@ -101,7 +107,9 @@ main {
     position: absolute;
     top: 0;
     right: 4rem;
-    /* color: white; */
+}
+#page-parcours p {
+    text-align: justify;
 }
 
 /* page-video */
@@ -186,7 +194,7 @@ main {
     font-style: italic;
     font-size: .75rem;
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
 }
 
 /* page contact */
@@ -202,12 +210,14 @@ main {
 }
 .page-contact-template h1 {
     font-size: 2rem;
+    border-bottom: 1px solid white;
 }
 .page-contact-template p {
     font-size: 12px;
 }
 
 .page-contact-template .social {
+    display: flex;
     margin-left: 1rem;
 }
 .page-contact-template .social img {
@@ -225,12 +235,19 @@ main {
     text-align: center;
     align-self: center;
 }
+.contact-holder .contact-icon img {
+ max-width: 32px;   
+}
 .contact-title {
+    border-top: 1px solid white;
     text-transform: uppercase;
     font-size: .8em;
     margin-bottom: .5rem;
+    padding-top: 1rem;
 }
-
+.contact-holder>*:nth-child(2) {
+    flex-grow: 2;
+}
 .contact-holder .content {
     margin-top: 0;
     margin-bottom: 0;
