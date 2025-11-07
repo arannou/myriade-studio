@@ -275,7 +275,7 @@ main {
 #page-actuality section:nth-child(2) {
     align-content: end;
 }
-#page-actuality .curvy{
+#page-actuality .curvy:not(.hide){
     height: 5rem;
     align-content: center;
     display: block;
