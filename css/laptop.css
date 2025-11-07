@@ -153,8 +153,13 @@
         display: initial;
     }
 
+    /* page-contact */
     .page-contact-template p {
         font-size: 1rem;
+    }
+
+    #page-contact .section-container {
+        padding-bottom: 1em;
     }
 
     #map img {
