@@ -62,11 +62,11 @@ main {
 /* page studio */
 #page-studio {
     background-color: var(--sauge);
-    padding-right: 4rem;
+    padding: 3rem;
 }
 
 #page-studio p {
-    margin-left: 0;
+    margin: 1rem 0;
     text-align: justify;
 }
 #page-studio h2 {
@@ -202,9 +202,7 @@ main {
 .page-contact-template {
     background-color: var(--milk-chocolate);
 }
-.page-contact-template section:first-child {
-    margin-right: 2rem;
-}
+
 .page-contact-template .section-container {
     color: white;
     padding: 1em;

@@ -146,6 +146,10 @@
         font-size: 3rem;
     }
 
+    .page-contact-template section:first-child {
+        margin-right: 2rem;
+    }
+
     #page-actuality #mobile {
         display: none;
     }
