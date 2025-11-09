@@ -146,6 +146,10 @@
         font-size: 3rem;
     }
 
+    .page-contact-template section:first-child {
+        margin-right: 2rem;
+    }
+
     #page-actuality #mobile {
         display: none;
     }
@@ -153,8 +157,13 @@
         display: initial;
     }
 
+    /* page-contact */
     .page-contact-template p {
         font-size: 1rem;
+    }
+
+    #page-contact .section-container {
+        padding-bottom: 1em;
     }
 
     #map img {

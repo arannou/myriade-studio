@@ -88,3 +88,33 @@ img.round-top {
     border-top-left-radius: 50vw;
     border-top-right-radius: 50vw;
 }
+
+#lang-switcher {
+    color: white;
+    border: 1px white solid;
+    display: flex;
+    position: fixed;
+    font-size: 1rem;
+    bottom: 5vw;
+    right: 5vw;
+    background-color: rgba(209, 151, 106, 0.3);
+}
+
+#lang-switcher:hover > p {
+    cursor: pointer;
+}
+
+#lang-switcher .active {
+    font-weight: bold;
+}
+
+#lang-switcher #separator {
+    margin: 1rem 0;
+}
+
+.english.hide {
+    display: none;
+}
+.francais.hide {
+    display: none;
+}
