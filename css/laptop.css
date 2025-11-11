@@ -115,10 +115,10 @@
     }
 
     .portrait-video video{
-        transform: rotate(90deg) translateY(-22vw);
+        /* transform: rotate(90deg) translateY(-22vw); */
         height: 29vw;
-        width: auto;
-        transform-origin: left top;
+        /* width: auto; */
+        /* transform-origin: left top; */
     }
     .portrait-video {
         height: 30vh;
@@ -166,6 +166,10 @@
     }
     #page-actuality #desktop {
         display: initial;
+    }
+
+    #page-past .past-text {
+        width: 60%;
     }
 
     /* page-contact */

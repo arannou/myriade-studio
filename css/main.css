@@ -297,6 +297,20 @@ main {
     display: none;
 }
 
+#page-past {
+    background-color: var(--sauge);
+    padding: 2vh 4rem;
+    color: white
+}
+
+#page-past img {
+    width: 100%;
+}
+#page-past .section-container {
+    padding: 2vh
+}
+
+
 #map {
     text-align: center;
 }
