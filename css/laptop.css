@@ -114,6 +114,17 @@
         grid-template-rows: none;
     }
 
+    .portrait-video video{
+        transform: rotate(90deg) translateY(-22vw);
+        height: 29vw;
+        width: auto;
+        transform-origin: left top;
+    }
+    .portrait-video {
+        height: 30vh;
+        overflow: hidden;
+    }
+
 
     /* page-services */
     #services-head {
