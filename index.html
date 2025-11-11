@@ -177,6 +177,15 @@
             <div class="collection-container">
                 <div class="row">
                     <figure>
+                        <div class="portrait-video">
+                            <video class="portrait-video" loop muted autoplay controlslist="nodownload" preload="metadata">
+                                <source src="images/eclipse.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                        <figcaption class="francais">Tissage "Eclipse" en lumière</figcaption>
+                        <figcaption class="english">3eclipse" weaving in light</figcaption>
+                    </figure>
+                    <figure>
                         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
                             <iframe src="https://geo.dailymotion.com/player.html?video=x9gnhpm"
                                 style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"
@@ -194,13 +203,14 @@
                         <figcaption class="francais">TV5 Monde - Visite de l'atelier - Juillet 2024</figcaption>
                         <figcaption class="english">TV5 Monde - Visit to the workshop - July 2024</figcaption>
                     </figure>
-                    <figure>
+                    <!-- <figure>
                         <video controls controlslist="nodownload" preload="metadata">
                             <source src="images/inauguration-de-lespace-Saint-cyr.mp4" type="video/mp4" />
                         </video>
                         <figcaption class="francais">Inauguration de l'Espace Saint Cyr</figcaption>
                         <figcaption class="english">Inauguration of the Espace Saint Cyr</figcaption>
-                    </figure>
+                    </figure> -->
+
                 </div>
             </div>
 
@@ -329,8 +339,8 @@
 
                 <div class="row">
                     <figure><img src="images/collection/J-Incandescence.JPG"></img></figure>
-                    <figure><img src="images/collection/J-incandescende -recadré.jpg"></img></figure>
-                    <figure><img src="images/collection/J-incandescende-work.jpg"></img></figure>
+                    <figure><img src="images/collection/J-Incandescence-square.jpg"></img></figure>
+                    <figure><img src="images/collection/J-Incandescence-work.jpg"></img></figure>
                 </div>
                 <figcaption class="francais">Incandescence - 2025<br>Tissé main, lanières de cuir, raphia, lurex - 50 x 21 cm<br> - Prix sur demande - </figcaption>
                 <figcaption class="english">Incandescence - 2025<br>Handwoven, leather straps, raffia, lurex - 50 x 21 cm<br> - Price upon request - </figcaption>
@@ -393,6 +403,72 @@
                 </section>
 
 
+            </div>
+        </div>
+
+        <div id="page-past" class="page-contact-template">
+            <h2 class="francais">ÉVÊNEMENTS PASSÉS</h2>
+            <h2 class="english">PAST EVENTS</h2>
+            <div class="section-container">
+                <section>
+                    <img src="images/affiche-rdv-matiere.png" />
+                </section>
+                <section>
+                    <img src="images/rdv-matiere.png" />
+                </section>
+            </div>
+            <div class="section-container">
+                <p class="francais past-text">Participation aux Rendez-vous de la Matière par Formae Magazine au Carreau du Temple pour aller à la rencontre d’architectes d’intérieur et de matériauthèques.
+                    </p>
+                <p class="english past-text">Participation to the Material Meeting by Formae Magazine at the Carreau du Temple to meet interior architects and material designers.
+                    </p>
+
+                <div class="contact-holder">
+                    <div class="contact-icon"><img src="images/icons/location-pin-svgrepo-com.svg"></div>
+                        <a href="geo:48.86465974703253, 2.362342388700032">
+                        <p class="contact-title francais">Adresse</p>
+                        <p class="contact-title english">Address</p>
+
+                        <p class="content">Le Carreau du Temple</p>
+                        <p class="content">4 rue Eugène Spuller</p>
+                        <p class="content">75003 Paris</p>
+
+                    </a>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="section-container" style="border-top:  1px solid white;">
+                <section>
+                    <img src="images/salon-revelation-paysage.jpg" />
+                    <div class="display-flex">
+                        <p class="francais past-text">Participation à la Biennale Révélations sous la verrière du Grand Palais avec la présentation du triptyque “Echo” en collaboration avec l’artisan textile Kanaé Briandet qui travaille les cocons de soie et l’ébéniste Philippe Sarazin de Labo Voluptas.
+                            </p>
+                        <p class="english past-text">Participation in the Révélations Biennale under the glass roof of the Grand Palais with the presentation of the triptych “Echo” in collaboration with the textile artisan Kanaé Briandet who works silk cocoons and the cabinetmaker Philippe Sarazin of Labo Voluptas.</p>
+                    </div>
+
+
+                    <div class="contact-holder">
+                        <div class="contact-icon"><img src="images/icons/location-pin-svgrepo-com.svg"></div>
+                        <a href="geo:48.86621746134836, 2.312430677142235">
+                            <p class="contact-title">Adresse</p>
+
+                            <p class="content">Grand Palais</p>
+                            <p class="content">3 avenue du Général Eisenhower</p>
+                            <p class="content">75008 Paris</p>
+
+
+                            <p>Métro Champs-Elysées - Clémenceau</p>
+                        </a>
+                    </div>
+
+                </section>
+                <section>
+                    <img src="images/revelation-stand.png" />
+                </section>
             </div>
         </div>
 
@@ -462,7 +538,7 @@
                         </div>
                     </div>
                 </section>
-                <section>
+                <section id="map-container">
                     <div id="map">
                         <img src="images/map.png" />
                     </div>
@@ -472,6 +548,8 @@
             <div class="bottom-image">
                 <img src="images/footer.jpg" />
             </div>
+        </div>
+
     </main>
 
     <div id="lang-switcher">
@@ -482,3 +560,4 @@
     <script src="scripts/interactions.js"></script>
 
 </body>
+</html>
