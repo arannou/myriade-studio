@@ -80,8 +80,8 @@
         <div id="page-accueil" class="page">
             <div class="section-container">
                 <section id="home-text">
-                    <h1 class="francais">Soulignons vos intérieurs</h1>
-                    <h1 class="english">Highlight your interiors</h1>
+                    <h1 class="francais only-desktop">Soulignons vos intérieurs</h1>
+                    <h1 class="english only-desktop">Highlight your interiors</h1>
                     <p class="francais">Des matières pour éveiller vos sens</p>
                     <p class="english">Materials to awaken your senses</p>
                     <p class="white-frame francais">Atelier de tissage en relief et en lumière</p>
@@ -97,8 +97,19 @@
                                 <img alt="Lien vers mon compte Instagram" src="images/icons/instagram-ecru.png" /></a>
                         </div>
                 </section>
-                <section id="big-image"><img alt="Des échantillons de tissage en relief"
-                        src="images/01-echantillons-vue-dessus.jpg" /></section>
+                <section id="big-image">
+
+                    <div class="portrait-video">
+                        <video class="portrait-video" loop muted autoplay controlslist="nodownload" preload="metadata"
+                            alt="Vidéo de présentation du tissage 'Eclipse' en lumière"
+                            poster="images/01-echantillons-vue-dessus.jpg">
+                            <source src="images/eclipse.mp4" type="video/mp4" />
+
+                        </video>
+                    </div>
+                    <h1 class="francais only-mobile">Soulignons vos intérieurs</h1>
+                    <h1 class="english only-mobile">Highlight your interiors</h1>
+                </section>
             </div>
         </div>
         <div id="page-studio" class="page">
@@ -198,16 +209,6 @@
                         </figcaption>
                     </figure>
 
-                    <figure>
-                        <div class="portrait-video">
-                            <video class="portrait-video" loop muted autoplay controlslist="nodownload"
-                                preload="metadata" alt="Vidéo de présentation du tissage 'Eclipse' en lumière">
-                                <source src="images/eclipse.mp4" type="video/mp4" />
-                            </video>
-                        </div>
-                        <figcaption class="francais">Tissage "Eclipse" en lumière</figcaption>
-                        <figcaption class="english">3eclipse" weaving in light</figcaption>
-                    </figure>
                     <figure>
                         <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
                             <iframe title="Interview dans le magazine 'Vous êtes formidable' sur France 3"
@@ -432,9 +433,9 @@
                     <h2 class="english">NEWS</h2> -->
 
                     <div class="display-flex revelations">
-                        <img id="mobile" src="images/saudi-week-portrait.jpg"
+                        <img class="only-mobile" src="images/saudi-week-portrait.jpg"
                             alt="Visuel officiel du salon Saudi International Handicrafts Week" />
-                        <img id="desktop" src="images/saudi-week-paysage.jpg"
+                        <img class="only-desktop" src="images/saudi-week-paysage.jpg"
                             alt="Visuel officiel du salon Saudi International Handicrafts Week" />
                     </div>
                 </section>
