@@ -13,7 +13,7 @@ main {
 }
 
 .only-mobile {
-    display: initial;
+    display: block;
 }
 
 .only-desktop {
@@ -25,7 +25,7 @@ main {
 
 #page-accueil {
     text-align: left;
-    height: 100vh;
+    height: 95vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/background-phone.jpg);
@@ -62,7 +62,7 @@ main {
 
 #big-image {
     position: relative;
-    flex-grow: 2
+    /* flex-grow: 2 */
 }
 
 #big-image video {
@@ -110,8 +110,7 @@ main {
 
 /* page parcours */
 #page-parcours {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     position: relative;
     background-color: var(--milk-chocolate);
     color: white
@@ -212,6 +211,11 @@ main {
     text-align: center;
 }
 
+#page-collection h1 {
+    margin: 0;
+    padding: 1.5rem;
+}
+
 #page-collection img {
     max-width: 100%;
 }
@@ -233,6 +237,12 @@ main {
     margin-top: 1rem;
     margin-bottom: 7rem;
 }
+
+#page-collection figcaption.last {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+}
+
 
 /* page contact */
 .page-contact-template {
